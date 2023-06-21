@@ -8,7 +8,7 @@
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
-
+    // Define a dark theme StyleSheet
     QFile styleSheetFile(":/darktheme.qss");
     styleSheetFile.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(styleSheetFile.readAll());
@@ -24,10 +24,10 @@ int main(int argc, char *argv[]) {
     QTreeView tree;
     tree.setModel(&model);
 
-
+    // Get the selection model from the tree view.
     QItemSelectionModel *selectionModel = tree.selectionModel();
 
-
+    // When the current file selection changes, show the file path in the status bar.
     QObject::connect(selectionModel, &QItemSelectionModel::currentChanged, [&mainWindow, &model](const QModelIndex &current) {
         mainWindow.statusBar()->showMessage(model.filePath(current));
     });

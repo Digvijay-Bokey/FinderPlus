@@ -1,0 +1,16 @@
+* {
+    background: #282828;
+    color: #b3b3b3;
+}
+
+QTreeView {
+    alternate-background-color: #313131;
+}
+
+QTreeView::item:selected {
+    background: #1db954;
+}
+
+QStatusBar {
+    color: #1db954;
+}
