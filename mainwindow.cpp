@@ -24,8 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
     qApp->setStyleSheet(styleSheet);
 
     setAttribute(Qt::WA_TranslucentBackground);
-    setWindowFlags(Qt::FramelessWindowHint);
-
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowTransparentForInput);
+    setAttribute(Qt::WA_UnderMouse);
 }
 
 MainWindow::~MainWindow() {

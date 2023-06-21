@@ -4,9 +4,9 @@
 #include <QMainWindow>
 #include <QFileSystemModel>
 
-namespace Ui {
-class MainWindow;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -19,11 +19,5 @@ private:
     Ui::MainWindow *ui;
     QFileSystemModel *model;
 };
-
-
-private:
-    Ui::MainWindow *ui;
-    QFileSystemModel *model;
-    QPushButton *closeButton;  // Add this line
 
 #endif // MAINWINDOW_H
