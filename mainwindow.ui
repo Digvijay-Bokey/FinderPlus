@@ -6,85 +6,135 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QScrollArea" name="scrollArea">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>60</y>
-      <width>380</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <property name="widgetResizable">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="scrollAreaWidgetContents">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>378</width>
-       <height>229</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="backButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>50</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Back</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="forwardButton">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>10</y>
-      <width>70</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Forward</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="pathLabel">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>10</y>
-      <width>240</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QToolBar" name="toolBar">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(24, 24, 24, 180);</string>
+      </property>
+      <attribute name="toolBarArea">
+       <enum>TopToolBarArea</enum>
+      </attribute>
+      <attribute name="toolBarBreak">
+       <bool>false</bool>
+      </attribute>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <property name="floatable">
+       <bool>false</bool>
+      </property>
+      <addaction name="actionBack"/>
+      <addaction name="actionForward"/>
+      <addaction name="actionOpen_Folder"/>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(24, 24, 24, 180);</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="pathLabel">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(24, 24, 24, 180);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
+  <action name="actionOpen_Folder">
+   <property name="text">
+    <string>Open Folder</string>
+   </property>
+  </action>
+  <action name="actionBack">
+   <property name="text">
+    <string>Back</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>back.png</normaloff>back.png</iconset>
+   </property>
+  </action>
+  <action name="actionForward">
+   <property name="text">
+    <string>Forward</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>forward.png</normaloff>forward.png</iconset>
+   </property>
+  </action>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QScrollArea</class>
-   <extends>QAbstractScrollArea</extends>
-   <header>qscrollarea.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connect>
+   <sender>actionOpen_Folder</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_fileButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>713</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>354</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connect>
+  <connect>
+   <sender>actionBack</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_backButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connect>
+  <connect>
+   <sender>actionForward</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_forwardButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>321</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connect>
+ </connections>
 </ui>

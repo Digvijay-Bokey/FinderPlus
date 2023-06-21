@@ -44,3 +44,18 @@ QWidget {
     border-radius: 10px;
     margin: 5px;
 }
+
+/* ToolBar */
+QToolBar {
+    border: none;
+}
+
+QToolBar::button {
+    background-color: #222222;
+    color: #d3d3d3;
+}
+
+QToolBar::button:hover {
+    background-color: #d3d3d3;
+    color: #141414;
+}

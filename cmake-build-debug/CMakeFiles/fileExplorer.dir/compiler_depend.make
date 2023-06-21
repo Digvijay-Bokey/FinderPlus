@@ -842,10 +842,8 @@ CMakeFiles/fileExplorer.dir/fileExplorer_autogen/mocs_compilation.cpp.o: fileExp
   /opt/homebrew/include/QtGui/qcursor.h \
   /opt/homebrew/include/QtGui/qbitmap.h \
   /opt/homebrew/include/QtWidgets/qtabwidget.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h \
-  /opt/homebrew/include/QtCore/qabstractitemmodel.h \
-  /opt/homebrew/include/QtCore/qdir.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDir \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
   /opt/homebrew/include/QtCore/qfile.h \
   /opt/homebrew/include/QtCore/qfiledevice.h \
   /opt/homebrew/include/QtCore/qiodevice.h \
@@ -924,17 +922,6 @@ CMakeFiles/fileExplorer.dir/fileExplorer_autogen/mocs_compilation.cpp.o: fileExp
   /opt/homebrew/include/QtCore/qdatetime.h \
   /opt/homebrew/include/QtCore/qcalendar.h \
   /opt/homebrew/include/QtCore/qlocale.h \
-  /opt/homebrew/include/QtCore/qdiriterator.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
-  /opt/homebrew/include/QtWidgets/qframe.h \
-  /opt/homebrew/include/QtGui/qpicture.h \
-  /opt/homebrew/include/QtGui/qtextdocument.h \
-  /opt/homebrew/include/QtCore/qurl.h \
-  /opt/homebrew/include/QtGui/qtextcursor.h \
-  /opt/homebrew/include/QtGui/qtextformat.h \
-  /opt/homebrew/include/QtGui/qpen.h \
-  /opt/homebrew/include/QtGui/qtextoption.h \
   /opt/homebrew/include/QtCore/qtmochelpers.h
 
 CMakeFiles/fileExplorer.dir/main.cpp.o: /Users/digvijay/Documents/GitHub/FinderPlus/main.cpp \
@@ -1786,10 +1773,8 @@ CMakeFiles/fileExplorer.dir/main.cpp.o: /Users/digvijay/Documents/GitHub/FinderP
   /opt/homebrew/include/QtGui/qfontinfo.h \
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
   /opt/homebrew/include/QtWidgets/qtabwidget.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h \
-  /opt/homebrew/include/QtCore/qabstractitemmodel.h \
-  /opt/homebrew/include/QtCore/qdir.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDir \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
   /opt/homebrew/include/QtCore/qfile.h \
   /opt/homebrew/include/QtCore/qfiledevice.h \
   /opt/homebrew/include/QtCore/qiodevice.h \
@@ -1866,14 +1851,7 @@ CMakeFiles/fileExplorer.dir/main.cpp.o: /Users/digvijay/Documents/GitHub/FinderP
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /opt/homebrew/include/QtCore/qfileinfo.h \
   /opt/homebrew/include/QtCore/qdatetime.h \
-  /opt/homebrew/include/QtCore/qcalendar.h \
-  /opt/homebrew/include/QtCore/qdiriterator.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
-  /opt/homebrew/include/QtWidgets/qframe.h \
-  /opt/homebrew/include/QtGui/qpicture.h \
-  /opt/homebrew/include/QtGui/qtextdocument.h \
-  /opt/homebrew/include/QtCore/qurl.h
+  /opt/homebrew/include/QtCore/qcalendar.h
 
 CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/FinderPlus/mainwindow.cpp \
   /Users/digvijay/Documents/GitHub/FinderPlus/mainwindow.h \
@@ -2713,10 +2691,8 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
   /opt/homebrew/include/QtGui/qcursor.h \
   /opt/homebrew/include/QtGui/qbitmap.h \
   /opt/homebrew/include/QtWidgets/qtabwidget.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h \
-  /opt/homebrew/include/QtCore/qabstractitemmodel.h \
-  /opt/homebrew/include/QtCore/qdir.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDir \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
   /opt/homebrew/include/QtCore/qfile.h \
   /opt/homebrew/include/QtCore/qfiledevice.h \
   /opt/homebrew/include/QtCore/qiodevice.h \
@@ -2795,13 +2771,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
   /opt/homebrew/include/QtCore/qdatetime.h \
   /opt/homebrew/include/QtCore/qcalendar.h \
   /opt/homebrew/include/QtCore/qlocale.h \
-  /opt/homebrew/include/QtCore/qdiriterator.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
-  /opt/homebrew/include/QtWidgets/qframe.h \
-  /opt/homebrew/include/QtGui/qpicture.h \
-  /opt/homebrew/include/QtGui/qtextdocument.h \
-  /opt/homebrew/include/QtCore/qurl.h \
   fileExplorer_autogen/include/ui_mainwindow.h \
   /opt/homebrew/include/QtCore/QVariant \
   /opt/homebrew/lib/QtCore.framework/Headers/qvariant.h \
@@ -2815,77 +2784,37 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
   /opt/homebrew/include/QtGui/qguiapplication.h \
   /opt/homebrew/include/QtGui/qinputmethod.h \
   /opt/homebrew/include/QtGui/qguiapplication_platform.h \
+  /opt/homebrew/include/QtWidgets/QLabel \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
+  /opt/homebrew/include/QtWidgets/qframe.h \
+  /opt/homebrew/include/QtGui/qpicture.h \
+  /opt/homebrew/include/QtGui/qtextdocument.h \
+  /opt/homebrew/include/QtCore/qurl.h \
   /opt/homebrew/include/QtWidgets/QMainWindow \
+  /opt/homebrew/include/QtWidgets/QPushButton \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /opt/homebrew/include/QtWidgets/QScrollArea \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollarea.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
-  /opt/homebrew/include/QtWidgets/QVBoxLayout \
+  /opt/homebrew/include/QtWidgets/QWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QFileIconProvider \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qfileiconprovider.h \
+  /opt/homebrew/include/QtGui/qabstractfileiconprovider.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QScrollArea \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /opt/homebrew/include/QtWidgets/qlayout.h \
   /opt/homebrew/include/QtWidgets/qlayoutitem.h \
   /opt/homebrew/include/QtWidgets/qboxlayout.h \
   /opt/homebrew/include/QtWidgets/qgridlayout.h \
-  /opt/homebrew/include/QtWidgets/QWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QFile \
-  /opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QDirIterator \
-  /opt/homebrew/lib/QtCore.framework/Headers/qdiriterator.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QListWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlistwidget.h \
-  /opt/homebrew/include/QtWidgets/qlistview.h \
-  /opt/homebrew/include/QtWidgets/qabstractitemview.h \
-  /opt/homebrew/include/QtCore/qitemselectionmodel.h \
-  /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
-  /opt/homebrew/include/QtWidgets/qstyleoption.h \
-  /opt/homebrew/include/QtWidgets/qabstractspinbox.h \
-  /opt/homebrew/include/QtGui/qvalidator.h \
-  /opt/homebrew/include/QtCore/qregularexpression.h \
-  /opt/homebrew/include/QtWidgets/qslider.h \
-  /opt/homebrew/include/QtWidgets/qabstractslider.h \
-  /opt/homebrew/include/QtWidgets/qstyle.h \
-  /opt/homebrew/include/QtWidgets/qtabbar.h \
-  /opt/homebrew/include/QtWidgets/qrubberband.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QFileInfoList \
-  /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QFileIconProvider \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qfileiconprovider.h \
-  /opt/homebrew/include/QtGui/qabstractfileiconprovider.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QDateTime \
-  /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h
 
 
-/opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar:
-
-/opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h:
-
-/opt/homebrew/lib/QtCore.framework/Headers/QDateTime:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/QFileIconProvider:
-
-/opt/homebrew/include/QtWidgets/qrubberband.h:
-
-/opt/homebrew/include/QtWidgets/qabstractslider.h:
-
-/opt/homebrew/include/QtWidgets/qstyleoption.h:
-
-/opt/homebrew/include/QtWidgets/qabstractitemview.h:
-
-/opt/homebrew/include/QtWidgets/qlistview.h:
-
-/opt/homebrew/lib/QtCore.framework/Headers/QDirIterator:
-
-/opt/homebrew/lib/QtCore.framework/Headers/qfile.h:
-
-/opt/homebrew/lib/QtCore.framework/Headers/QFile:
-
-/opt/homebrew/include/QtWidgets/QWidget:
+/opt/homebrew/lib/QtCore.framework/Headers/QDebug:
 
 /opt/homebrew/include/QtWidgets/qgridlayout.h:
 
@@ -2893,11 +2822,29 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h:
 
+/opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/QScrollArea:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/QFileIconProvider:
+
+/opt/homebrew/include/QtWidgets/QWidget:
+
 /opt/homebrew/include/QtWidgets/qabstractscrollarea.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollarea.h:
 
+/opt/homebrew/include/QtWidgets/qabstractbutton.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h:
+
 /opt/homebrew/include/QtWidgets/QMainWindow:
+
+/opt/homebrew/include/QtGui/qtextdocument.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h:
+
+/opt/homebrew/include/QtWidgets/QLabel:
 
 /Users/digvijay/Documents/GitHub/FinderPlus/mainwindow.cpp:
 
@@ -2914,20 +2861,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication:
 
 /Users/digvijay/Documents/GitHub/FinderPlus/main.cpp:
-
-/opt/homebrew/include/QtGui/qtextoption.h:
-
-/opt/homebrew/include/QtGui/qtextformat.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/QListWidget:
-
-/opt/homebrew/include/QtGui/qtextcursor.h:
-
-/opt/homebrew/include/QtGui/qtextdocument.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h:
-
-/opt/homebrew/include/QtCore/qdiriterator.h:
 
 /opt/homebrew/include/QtCore/qlocale.h:
 
@@ -3019,11 +2952,7 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/filesystem:
 
-/opt/homebrew/include/QtCore/qabstractitemmodel.h:
-
-/opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h:
-
-/opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel:
+/opt/homebrew/lib/QtCore.framework/Headers/qdir.h:
 
 /opt/homebrew/include/QtWidgets/qtabwidget.h:
 
@@ -3040,8 +2969,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /opt/homebrew/include/QtCore/qmap.h:
 
 /opt/homebrew/include/QtCore/qstringconverter_base.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h:
 
 /opt/homebrew/include/QtCore/qtextstream.h:
 
@@ -3197,8 +3124,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_map:
 
-/opt/homebrew/include/QtGui/qpen.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/unreachable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/shift_right.h:
@@ -3216,8 +3141,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /opt/homebrew/include/QtCore/qdatastream.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/unique_copy.h:
-
-/opt/homebrew/lib/QtCore.framework/Headers/qdiriterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_unique_copy.h:
 
@@ -3363,8 +3286,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_find_if.h:
 
-/opt/homebrew/include/QtGui/qvalidator.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstdlib:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_shuffle.h:
@@ -3394,8 +3315,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_uint64_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_adjacent_find.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_array.h:
 
@@ -3453,13 +3372,13 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/rotate.h:
 
+/opt/homebrew/lib/QtCore.framework/Headers/qdebug.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/min_element.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/includes.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/in_out_out_result.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/qlistwidget.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/in_in_result.h:
 
@@ -3893,8 +3812,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cwchar:
 
-/opt/homebrew/include/QtCore/qitemselectionmodel.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/directory_options.h:
@@ -4033,8 +3950,6 @@ fileExplorer_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/include/QtCore/qtcoreexports.h:
 
-/opt/homebrew/include/QtCore/qdir.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
 /opt/homebrew/include/QtCore/qtconfigmacros.h:
@@ -4042,8 +3957,6 @@ fileExplorer_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/cmp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/equality_comparable.h:
-
-/opt/homebrew/include/QtWidgets/qabstractitemdelegate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_object.h:
 
@@ -4085,8 +3998,6 @@ fileExplorer_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/common_with.h:
 
-/opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/runetype.h:
 
 /opt/homebrew/include/QtCore/qchar.h:
@@ -4106,8 +4017,6 @@ fileExplorer_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/reverse_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/copy_if.h:
-
-/opt/homebrew/include/QtWidgets/QVBoxLayout:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__memory/concepts.h:
 
@@ -4138,8 +4047,6 @@ fileExplorer_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__numeric/inner_product.h:
-
-/opt/homebrew/lib/QtCore.framework/Headers/QFileInfoList:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_mbstate_t.h:
 
@@ -4180,6 +4087,8 @@ fileExplorer_autogen/mocs_compilation.cpp:
 /opt/homebrew/lib/QtCore.framework/Headers/qvariant.h:
 
 /opt/homebrew/include/QtCore/qlist.h:
+
+/opt/homebrew/lib/QtCore.framework/Headers/QDir:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/aligned_union.h:
 
@@ -4451,8 +4360,6 @@ fileExplorer_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_assignable.h:
 
-/opt/homebrew/include/QtCore/qregularexpression.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/make_signed.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_next_permutation.h:
@@ -4501,8 +4408,6 @@ fileExplorer_autogen/EWIEGA46WW/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__node_handle:
 
-/opt/homebrew/include/QtWidgets/qtabbar.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
@@ -4546,8 +4451,6 @@ fileExplorer_autogen/EWIEGA46WW/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_sigset_t.h:
 
 /opt/homebrew/include/QtCore/qbytearray.h:
-
-/opt/homebrew/include/QtWidgets/qslider.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/machine/limits.h:
 
@@ -4627,6 +4530,8 @@ fileExplorer_autogen/EWIEGA46WW/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_abstract.h:
 
+/opt/homebrew/include/QtWidgets/QPushButton:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/disjunction.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/ctime:
@@ -4647,8 +4552,6 @@ fileExplorer_autogen/EWIEGA46WW/qrc_resources.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_reverse_copy.h:
 
-/opt/homebrew/include/QtWidgets/qabstractspinbox.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/is_permutation.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_u_int32_t.h:
@@ -4664,8 +4567,6 @@ fileExplorer_autogen/EWIEGA46WW/qrc_resources.cpp:
 /opt/homebrew/include/QtCore/qtpreprocessorsupport.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/replace_copy.h:
-
-/opt/homebrew/include/QtWidgets/qstyle.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/in_found_result.h:
 

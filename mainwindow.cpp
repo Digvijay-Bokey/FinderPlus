@@ -1,69 +1,86 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QFileIconProvider>
+#include <QFileDialog>
+#include <QFileSystemModel>
+#include <QDir>
 #include <QLabel>
-#include <QScrollArea>
-#include <QVBoxLayout>
+#include <QGridLayout>
+#include <QDateTime>
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-    , initialPath(QDir::homePath())
-{
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), historyIndex(-1) {
     ui->setupUi(this);
-
-    // Initialize history
-    history.push_back(initialPath);
-    historyIndex = 0;
-
-    loadDirectory(initialPath);
-
-    connect(ui->backButton, &QPushButton::clicked, this, &MainWindow::goBack);
-    connect(ui->forwardButton, &QPushButton::clicked, this, &MainWindow::goForward);
+    loadDirectory(QDir::homePath());
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     delete ui;
 }
 
-void MainWindow::goBack() {
-    if(historyIndex > 0) {
+void MainWindow::loadDirectory(QString directoryPath) {
+    QDir directory(directoryPath);
+    auto list = directory.entryInfoList(QDir::NoDotAndDotDot | QDir::AllEntries);
+
+    auto widget = new QWidget();
+    auto layout = new QGridLayout(widget);
+
+    int row = 0;
+    int col = 0;
+
+    for (const auto &fileInfo : list) {
+        auto button = new QPushButton();
+        button->setIcon(QIcon(fileInfo.absoluteFilePath()));
+        button->setIconSize(QSize(100, 100));
+        button->setFixedSize(QSize(120, 120));
+
+        QString fileInfoString = fileInfo.fileName() + "\n" +
+            fileInfo.lastModified().toString("yyyy-MM-dd hh:mm:ss");
+
+        auto textLabel = new QLabel(fileInfoString);
+
+        layout->addWidget(button, row, col, Qt::AlignCenter);
+        layout->addWidget(textLabel, row+1, col, Qt::AlignCenter);
+
+        col++;
+
+        if (col == 4) {
+            row += 2;
+            col = 0;
+        }
+    }
+
+    ui->scrollArea->setWidget(widget);
+    ui->pathLabel->setText(directoryPath);
+
+    if (history.empty() || history.last() != directoryPath) {
+        history.append(directoryPath);
+        historyIndex++;
+    }
+
+    updateNavigationButtons();
+}
+
+void MainWindow::on_fileButton_clicked() {
+    QString directory = QFileDialog::getExistingDirectory(this, "Open a folder", QDir::homePath(), QFileDialog::ShowDirsOnly);
+    if (!directory.isEmpty()) {
+        loadDirectory(directory);
+    }
+}
+
+void MainWindow::on_backButton_clicked() {
+    if (historyIndex > 0) {
         historyIndex--;
         loadDirectory(history[historyIndex]);
     }
 }
 
-void MainWindow::goForward() {
-    if(historyIndex < history.size() - 1) {
+void MainWindow::on_forwardButton_clicked() {
+    if (historyIndex < history.size() - 1) {
         historyIndex++;
         loadDirectory(history[historyIndex]);
     }
 }
 
-void MainWindow::loadDirectory(QString directoryPath) {
-    QDir directory(directoryPath);
-    auto files = directory.entryInfoList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
-
-    QWidget *widget = new QWidget;
-    QVBoxLayout *layout = new QVBoxLayout;
-    widget->setLayout(layout);
-
-    for (const auto &file : files) {
-        auto icon = QFileIconProvider().icon(file);
-        QLabel *iconLabel = new QLabel;
-        iconLabel->setPixmap(icon.pixmap(50, 50));
-        layout->addWidget(iconLabel);
-
-        QLabel *textLabel = new QLabel;
-        textLabel->setText(QString("%1\nCreated: %2").arg(file.fileName()).arg(file.birthTime().toString()));
-        layout->addWidget(textLabel);
-    }
-
-    ui->scrollArea->setWidget(widget);
-
-    ui->backButton->setEnabled(historyIndex != 0);
-    ui->forwardButton->setEnabled(historyIndex != history.size() - 1);
-
-    ui->pathLabel->setText(directoryPath);
+void MainWindow::updateNavigationButtons() {
+    ui->backButton->setEnabled(historyIndex > 0);
+    ui->forwardButton->setEnabled(historyIndex < history.size() - 1);
 }

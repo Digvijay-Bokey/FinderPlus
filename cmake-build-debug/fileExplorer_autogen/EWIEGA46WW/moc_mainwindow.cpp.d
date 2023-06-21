@@ -87,7 +87,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/wait.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/QDir \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/QVector \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
@@ -104,7 +104,6 @@
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qbytearraylist.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qbytearrayview.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qcalendar.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qchar.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qcompare.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qcompare_impl.h \
@@ -117,13 +116,8 @@
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qdatetime.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qdebug.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qdir.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qfile.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qfiledevice.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qfileinfo.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qflags.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qfloat16.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qforeach.h \
@@ -133,13 +127,11 @@
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qglobalstatic.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qiodevice.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qlist.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qmap.h \
@@ -201,6 +193,7 @@
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvector.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qaction.h \

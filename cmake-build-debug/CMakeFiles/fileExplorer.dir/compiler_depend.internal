@@ -844,10 +844,8 @@ CMakeFiles/fileExplorer.dir/fileExplorer_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtGui/qcursor.h
  /opt/homebrew/include/QtGui/qbitmap.h
  /opt/homebrew/include/QtWidgets/qtabwidget.h
- /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel
- /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h
- /opt/homebrew/include/QtCore/qabstractitemmodel.h
- /opt/homebrew/include/QtCore/qdir.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDir
+ /opt/homebrew/lib/QtCore.framework/Headers/qdir.h
  /opt/homebrew/include/QtCore/qfile.h
  /opt/homebrew/include/QtCore/qfiledevice.h
  /opt/homebrew/include/QtCore/qiodevice.h
@@ -926,17 +924,6 @@ CMakeFiles/fileExplorer.dir/fileExplorer_autogen/mocs_compilation.cpp.o
  /opt/homebrew/include/QtCore/qdatetime.h
  /opt/homebrew/include/QtCore/qcalendar.h
  /opt/homebrew/include/QtCore/qlocale.h
- /opt/homebrew/include/QtCore/qdiriterator.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel
- /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h
- /opt/homebrew/include/QtWidgets/qframe.h
- /opt/homebrew/include/QtGui/qpicture.h
- /opt/homebrew/include/QtGui/qtextdocument.h
- /opt/homebrew/include/QtCore/qurl.h
- /opt/homebrew/include/QtGui/qtextcursor.h
- /opt/homebrew/include/QtGui/qtextformat.h
- /opt/homebrew/include/QtGui/qpen.h
- /opt/homebrew/include/QtGui/qtextoption.h
  /opt/homebrew/include/QtCore/qtmochelpers.h
 
 CMakeFiles/fileExplorer.dir/main.cpp.o
@@ -1789,10 +1776,8 @@ CMakeFiles/fileExplorer.dir/main.cpp.o
  /opt/homebrew/include/QtGui/qfontinfo.h
  /opt/homebrew/include/QtWidgets/qsizepolicy.h
  /opt/homebrew/include/QtWidgets/qtabwidget.h
- /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel
- /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h
- /opt/homebrew/include/QtCore/qabstractitemmodel.h
- /opt/homebrew/include/QtCore/qdir.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDir
+ /opt/homebrew/lib/QtCore.framework/Headers/qdir.h
  /opt/homebrew/include/QtCore/qfile.h
  /opt/homebrew/include/QtCore/qfiledevice.h
  /opt/homebrew/include/QtCore/qiodevice.h
@@ -1870,13 +1855,6 @@ CMakeFiles/fileExplorer.dir/main.cpp.o
  /opt/homebrew/include/QtCore/qfileinfo.h
  /opt/homebrew/include/QtCore/qdatetime.h
  /opt/homebrew/include/QtCore/qcalendar.h
- /opt/homebrew/include/QtCore/qdiriterator.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel
- /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h
- /opt/homebrew/include/QtWidgets/qframe.h
- /opt/homebrew/include/QtGui/qpicture.h
- /opt/homebrew/include/QtGui/qtextdocument.h
- /opt/homebrew/include/QtCore/qurl.h
 
 CMakeFiles/fileExplorer.dir/mainwindow.cpp.o
  /Users/digvijay/Documents/GitHub/FinderPlus/mainwindow.cpp
@@ -2717,10 +2695,8 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o
  /opt/homebrew/include/QtGui/qcursor.h
  /opt/homebrew/include/QtGui/qbitmap.h
  /opt/homebrew/include/QtWidgets/qtabwidget.h
- /opt/homebrew/lib/QtGui.framework/Headers/QFileSystemModel
- /opt/homebrew/lib/QtGui.framework/Headers/qfilesystemmodel.h
- /opt/homebrew/include/QtCore/qabstractitemmodel.h
- /opt/homebrew/include/QtCore/qdir.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDir
+ /opt/homebrew/lib/QtCore.framework/Headers/qdir.h
  /opt/homebrew/include/QtCore/qfile.h
  /opt/homebrew/include/QtCore/qfiledevice.h
  /opt/homebrew/include/QtCore/qiodevice.h
@@ -2799,13 +2775,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o
  /opt/homebrew/include/QtCore/qdatetime.h
  /opt/homebrew/include/QtCore/qcalendar.h
  /opt/homebrew/include/QtCore/qlocale.h
- /opt/homebrew/include/QtCore/qdiriterator.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel
- /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h
- /opt/homebrew/include/QtWidgets/qframe.h
- /opt/homebrew/include/QtGui/qpicture.h
- /opt/homebrew/include/QtGui/qtextdocument.h
- /opt/homebrew/include/QtCore/qurl.h
  /Users/digvijay/Documents/GitHub/FinderPlus/cmake-build-debug/fileExplorer_autogen/include/ui_mainwindow.h
  /opt/homebrew/include/QtCore/QVariant
  /opt/homebrew/lib/QtCore.framework/Headers/qvariant.h
@@ -2819,46 +2788,32 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o
  /opt/homebrew/include/QtGui/qguiapplication.h
  /opt/homebrew/include/QtGui/qinputmethod.h
  /opt/homebrew/include/QtGui/qguiapplication_platform.h
+ /opt/homebrew/include/QtWidgets/QLabel
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h
+ /opt/homebrew/include/QtWidgets/qframe.h
+ /opt/homebrew/include/QtGui/qpicture.h
+ /opt/homebrew/include/QtGui/qtextdocument.h
+ /opt/homebrew/include/QtCore/qurl.h
  /opt/homebrew/include/QtWidgets/QMainWindow
+ /opt/homebrew/include/QtWidgets/QPushButton
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h
+ /opt/homebrew/include/QtWidgets/qabstractbutton.h
  /opt/homebrew/include/QtWidgets/QScrollArea
  /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollarea.h
  /opt/homebrew/include/QtWidgets/qabstractscrollarea.h
- /opt/homebrew/include/QtWidgets/QVBoxLayout
+ /opt/homebrew/include/QtWidgets/QWidget
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QFileIconProvider
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qfileiconprovider.h
+ /opt/homebrew/include/QtGui/qabstractfileiconprovider.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QScrollArea
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout
  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h
  /opt/homebrew/include/QtWidgets/qlayout.h
  /opt/homebrew/include/QtWidgets/qlayoutitem.h
  /opt/homebrew/include/QtWidgets/qboxlayout.h
  /opt/homebrew/include/QtWidgets/qgridlayout.h
- /opt/homebrew/include/QtWidgets/QWidget
- /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h
- /opt/homebrew/lib/QtCore.framework/Headers/QFile
- /opt/homebrew/lib/QtCore.framework/Headers/qfile.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout
- /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h
- /opt/homebrew/lib/QtCore.framework/Headers/QDirIterator
- /opt/homebrew/lib/QtCore.framework/Headers/qdiriterator.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/QListWidget
- /opt/homebrew/lib/QtWidgets.framework/Headers/qlistwidget.h
- /opt/homebrew/include/QtWidgets/qlistview.h
- /opt/homebrew/include/QtWidgets/qabstractitemview.h
- /opt/homebrew/include/QtCore/qitemselectionmodel.h
- /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h
- /opt/homebrew/include/QtWidgets/qstyleoption.h
- /opt/homebrew/include/QtWidgets/qabstractspinbox.h
- /opt/homebrew/include/QtGui/qvalidator.h
- /opt/homebrew/include/QtCore/qregularexpression.h
- /opt/homebrew/include/QtWidgets/qslider.h
- /opt/homebrew/include/QtWidgets/qabstractslider.h
- /opt/homebrew/include/QtWidgets/qstyle.h
- /opt/homebrew/include/QtWidgets/qtabbar.h
- /opt/homebrew/include/QtWidgets/qrubberband.h
- /opt/homebrew/lib/QtCore.framework/Headers/QFileInfoList
- /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/QFileIconProvider
- /opt/homebrew/lib/QtWidgets.framework/Headers/qfileiconprovider.h
- /opt/homebrew/include/QtGui/qabstractfileiconprovider.h
- /opt/homebrew/lib/QtCore.framework/Headers/QDateTime
- /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar
- /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDebug
+ /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h
 
