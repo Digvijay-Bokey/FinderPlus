@@ -18,16 +18,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     QObject::connect(ui->listWidget, &QListWidget::currentRowChanged, ui->stackedWidget, &QStackedWidget::setCurrentIndex);
 
-    // Customize the UI
     QFile styleSheetFile(":/darktheme.qss");
     styleSheetFile.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(styleSheetFile.readAll());
-
-    // Set the stylesheet
     qApp->setStyleSheet(styleSheet);
 
-    // Enable transparency
     setAttribute(Qt::WA_TranslucentBackground);
+    setWindowFlags(Qt::FramelessWindowHint);
 }
 
 MainWindow::~MainWindow() {
