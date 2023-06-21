@@ -13,6 +13,10 @@ MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
 
+    setWindowOpacity(0.9);  // Sets the opacity of the window, between 0 (completely transparent) and 1 (completely opaque)
+    setAttribute(Qt::WA_NoSystemBackground, true);
+    setAttribute(Qt::WA_TranslucentBackground, true);
+
     auto layout = new QVBoxLayout;
     layout->setSpacing(10);
 
