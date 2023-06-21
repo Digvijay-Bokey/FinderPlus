@@ -11,9 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,35 +23,36 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QVBoxLayout *verticalLayout;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QVBoxLayout *verticalLayout_2;
+    QPushButton *backButton;
+    QPushButton *forwardButton;
+    QLabel *pathLabel;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 600);
+        MainWindow->resize(400, 300);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setSpacing(6);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
-        verticalLayout->setObjectName("verticalLayout");
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
+        scrollArea->setGeometry(QRect(10, 60, 380, 231));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_2->setObjectName("verticalLayout_2");
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 378, 229));
         scrollArea->setWidget(scrollAreaWidgetContents);
-
-        verticalLayout->addWidget(scrollArea);
-
+        backButton = new QPushButton(centralwidget);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(10, 10, 50, 23));
+        forwardButton = new QPushButton(centralwidget);
+        forwardButton->setObjectName("forwardButton");
+        forwardButton->setGeometry(QRect(70, 10, 70, 23));
+        pathLabel = new QLabel(centralwidget);
+        pathLabel->setObjectName("pathLabel");
+        pathLabel->setGeometry(QRect(150, 10, 240, 16));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -61,6 +63,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        backButton->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        forwardButton->setText(QCoreApplication::translate("MainWindow", "Forward", nullptr));
+        pathLabel->setText(QString());
     } // retranslateUi
 
 };

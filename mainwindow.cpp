@@ -1,63 +1,69 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QFile>
-#include <QGridLayout>
-#include <QDirIterator>
-#include <QListWidget>
-#include <QLabel>
-#include <QFileInfoList>
 #include <QFileIconProvider>
-#include <QDateTime>
-#include <QStatusBar>
+#include <QLabel>
+#include <QScrollArea>
+#include <QVBoxLayout>
 
 MainWindow::MainWindow(QWidget *parent)
-        : QMainWindow(parent), ui(new Ui::MainWindow) {
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+    , initialPath(QDir::homePath())
+{
     ui->setupUi(this);
 
-    auto layout = new QVBoxLayout;
-    layout->setSpacing(10);
+    // Initialize history
+    history.push_back(initialPath);
+    historyIndex = 0;
 
-    QDirIterator it(QDir::currentPath(), QDir::Files, QDirIterator::Subdirectories);
-    while (it.hasNext()) {
-        auto file = it.next();
-        auto fileInfo = QFileInfo(file);
-        auto icon = QFileIconProvider().icon(fileInfo);
+    loadDirectory(initialPath);
 
-        // Icon
-        auto iconLabel = new QLabel;
-        iconLabel->setPixmap(icon.pixmap(64, 64));
-
-        // Name and date
-        auto textLabel = new QLabel;
-        textLabel->setText(QString("%1\nCreated: %2").arg(fileInfo.fileName()).arg(fileInfo.birthTime().toString()));
-        textLabel->setStyleSheet("color: #d3d3d3;");
-
-        // Box for icon and text
-        auto box = new QWidget;
-        box->setStyleSheet("background-color: #282828; border-radius: 10px; margin: 5px;");
-        auto boxLayout = new QHBoxLayout;
-        boxLayout->addWidget(iconLabel);
-        boxLayout->addWidget(textLabel);
-        boxLayout->setAlignment(Qt::AlignLeft); // Ensure items stay on the left side
-        box->setLayout(boxLayout);
-
-        layout->addWidget(box);
-    }
-
-    auto widget = new QWidget;
-    widget->setLayout(layout);
-    ui->scrollArea->setWidget(widget);
-
-    // Adding the stylesheet
-    QFile styleSheetFile(":/darktheme.qss");
-    styleSheetFile.open(QFile::ReadOnly);
-    QString styleSheet = QLatin1String(styleSheetFile.readAll());
-    qApp->setStyleSheet(styleSheet);
-
-    // Displaying current path in status bar
-    statusBar()->showMessage(QDir::currentPath());
+    connect(ui->backButton, &QPushButton::clicked, this, &MainWindow::goBack);
+    connect(ui->forwardButton, &QPushButton::clicked, this, &MainWindow::goForward);
 }
 
-MainWindow::~MainWindow() {
+MainWindow::~MainWindow()
+{
     delete ui;
+}
+
+void MainWindow::goBack() {
+    if(historyIndex > 0) {
+        historyIndex--;
+        loadDirectory(history[historyIndex]);
+    }
+}
+
+void MainWindow::goForward() {
+    if(historyIndex < history.size() - 1) {
+        historyIndex++;
+        loadDirectory(history[historyIndex]);
+    }
+}
+
+void MainWindow::loadDirectory(QString directoryPath) {
+    QDir directory(directoryPath);
+    auto files = directory.entryInfoList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
+
+    QWidget *widget = new QWidget;
+    QVBoxLayout *layout = new QVBoxLayout;
+    widget->setLayout(layout);
+
+    for (const auto &file : files) {
+        auto icon = QFileIconProvider().icon(file);
+        QLabel *iconLabel = new QLabel;
+        iconLabel->setPixmap(icon.pixmap(50, 50));
+        layout->addWidget(iconLabel);
+
+        QLabel *textLabel = new QLabel;
+        textLabel->setText(QString("%1\nCreated: %2").arg(file.fileName()).arg(file.birthTime().toString()));
+        layout->addWidget(textLabel);
+    }
+
+    ui->scrollArea->setWidget(widget);
+
+    ui->backButton->setEnabled(historyIndex != 0);
+    ui->forwardButton->setEnabled(historyIndex != history.size() - 1);
+
+    ui->pathLabel->setText(directoryPath);
 }
