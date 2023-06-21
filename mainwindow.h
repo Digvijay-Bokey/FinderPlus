@@ -20,4 +20,10 @@ private:
     QFileSystemModel *model;
 };
 
+
+private:
+    Ui::MainWindow *ui;
+    QFileSystemModel *model;
+    QPushButton *closeButton;  // Add this line
+
 #endif // MAINWINDOW_H

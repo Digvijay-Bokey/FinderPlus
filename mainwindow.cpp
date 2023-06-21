@@ -25,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     setAttribute(Qt::WA_TranslucentBackground);
     setWindowFlags(Qt::FramelessWindowHint);
+
 }
 
 MainWindow::~MainWindow() {
