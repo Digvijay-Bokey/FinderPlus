@@ -16,3 +16,132 @@ QMainWindow {
 QScrollArea {
     background-color: #181818;
 }
+/* General */
+* {
+    background-color: #141414;
+    color: #E50914;
+    border: none;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #222222;
+    color: #E50914;
+}
+
+QPushButton:hover {
+    background-color: #E50914;
+    color: #141414;
+}
+
+/* Scroll Bar */
+QScrollBar:vertical {
+    background-color: #222222;
+    width: 15px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #E50914;
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Labels */
+QLabel {
+    color: #E50914;
+}
+/* General */
+* {
+    background-color: #181818;
+    color: #E50914;
+    border: none;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #222222;
+    color: #E50914;
+}
+
+QPushButton:hover {
+    background-color: #E50914;
+    color: #141414;
+}
+
+/* Scroll Bar */
+QScrollBar:vertical {
+    background-color: #222222;
+    width: 15px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #E50914;
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Labels */
+QLabel {
+    color: #E50914;
+    padding: 10px;
+}
+
+QWidget {
+    background-color: #282828;
+    border-radius: 10px;
+    margin: 5px;
+}
+/* General */
+* {
+    background-color: #181818;
+    color: #d3d3d3; /* changed color from red to light gray */
+    border: none;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #222222;
+    color: #d3d3d3; /* changed color from red to light gray */
+}
+
+QPushButton:hover {
+    background-color: #d3d3d3; /* changed color from red to light gray */
+    color: #141414;
+}
+
+/* Scroll Bar */
+QScrollBar:vertical {
+    background-color: #222222;
+    width: 15px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #d3d3d3; /* changed color from red to light gray */
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Labels */
+QLabel {
+    color: #d3d3d3; /* changed color from red to light gray */
+    padding: 10px;
+}
+
+QWidget {
+    background-color: #282828;
+    border-radius: 10px;
+    margin: 5px;
+}
