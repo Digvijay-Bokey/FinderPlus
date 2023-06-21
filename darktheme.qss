@@ -11,3 +11,8 @@ QTreeView::item {
 QTreeView::item:selected {
     background: rgba(29, 185, 84, 127);
 }
+QListWidget {
+    background-color: rgba(0, 0, 0, 100);
+    border: 1px solid rgba(255, 255, 255, 50);
+}
+
