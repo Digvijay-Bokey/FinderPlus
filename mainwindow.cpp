@@ -6,6 +6,7 @@
 #include <QListWidget>
 #include <QLabel>
 #include <QFileInfoList>
+#include <QFileIconProvider>  // Add this line
 
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -26,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     widget->setLayout(layout);
 
     ui->scrollArea->setWidget(widget);
+
 
     QFile styleSheetFile(":/darktheme.qss");
     styleSheetFile.open(QFile::ReadOnly);
