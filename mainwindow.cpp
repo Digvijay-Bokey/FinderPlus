@@ -26,13 +26,10 @@ MainWindow::MainWindow(QWidget *parent)
         auto iconLabel = new QLabel;
         iconLabel->setPixmap(icon.pixmap(64, 64));
 
-
         // Name and date
         auto textLabel = new QLabel;
         textLabel->setText(QString("%1\nCreated: %2").arg(fileInfo.fileName()).arg(fileInfo.birthTime().toString()));
-        textLabel->setStyleSheet("color: #d3d3d3;");  // Changed the color to light gray
-
-
+        textLabel->setStyleSheet("color: #d3d3d3;");
 
         // Box for icon and text
         auto box = new QWidget;
@@ -40,6 +37,7 @@ MainWindow::MainWindow(QWidget *parent)
         auto boxLayout = new QHBoxLayout;
         boxLayout->addWidget(iconLabel);
         boxLayout->addWidget(textLabel);
+        boxLayout->setAlignment(Qt::AlignLeft); // Ensure items stay on the left side
         box->setLayout(boxLayout);
 
         layout->addWidget(box);
