@@ -45,9 +45,9 @@ void MainWindow::listDirectory(QString path)
         auto icon = QFileIconProvider().icon(fileInfo);
         iconLabel->setPixmap(icon.pixmap(50, 50));
 
-        textLabel->setText(QString("%1\nCreated: %2")
-            .arg(fileInfo.fileName())
-            .arg(fileInfo.birthTime().toString()));
+     textLabel->setText(QString("%1\nCreated: %2")
+        .arg(fileInfo.fileName())
+        .arg(fileInfo.birthTime().toString()));
 
         QPushButton *button = new QPushButton("Open");
         connect(button, &QPushButton::clicked, [=](){
