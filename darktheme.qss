@@ -99,10 +99,10 @@ QWidget {
     border-radius: 10px;
     margin: 5px;
 }
-/* General */
+
 * {
     background-color: #181818;
-    color: #d3d3d3; /* changed color from red to light gray */
+    color: #d3d3d3;
     border: none;
     font-size: 16px;
     font-family: Arial;
@@ -111,11 +111,11 @@ QWidget {
 /* Buttons */
 QPushButton {
     background-color: #222222;
-    color: #d3d3d3; /* changed color from red to light gray */
+    color: #d3d3d3;
 }
 
 QPushButton:hover {
-    background-color: #d3d3d3; /* changed color from red to light gray */
+    background-color: #d3d3d3;
     color: #141414;
 }
 
@@ -126,7 +126,7 @@ QScrollBar:vertical {
 }
 
 QScrollBar::handle:vertical {
-    background-color: #d3d3d3; /* changed color from red to light gray */
+    background-color: #d3d3d3;
     min-height: 20px;
 }
 
@@ -136,7 +136,7 @@ QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
 
 /* Labels */
 QLabel {
-    color: #d3d3d3; /* changed color from red to light gray */
+    color: #d3d3d3;
     padding: 10px;
 }
 
@@ -147,7 +147,7 @@ QWidget {
 }
 /* General */
 * {
-    background-color: rgba(24, 24, 24, 180); /* Adding alpha value to the color */
+    background-color: rgba(24, 24, 24, 180);
     color: #d3d3d3;
     border: none;
     font-size: 16px;
@@ -165,7 +165,7 @@ QPushButton:hover {
     color: #141414;
 }
 
-/* Scroll Bar */
+
 QScrollBar:vertical {
     background-color: #222222;
     width: 15px;
@@ -187,7 +187,7 @@ QLabel {
 }
 
 QWidget {
-    background-color: rgba(40, 40, 40, 180); /* Adding alpha value to the color */
+    background-color: rgba(40, 40, 40, 180);
     border-radius: 10px;
     margin: 5px;
 }

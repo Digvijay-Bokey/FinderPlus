@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
 
-    setWindowOpacity(0.9);  // Sets the opacity of the window, between 0 (completely transparent) and 1 (completely opaque)
+    setWindowOpacity(0.9);
     setAttribute(Qt::WA_NoSystemBackground, true);
     setAttribute(Qt::WA_TranslucentBackground, true);
 
@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent)
         auto boxLayout = new QHBoxLayout;
         boxLayout->addWidget(iconLabel);
         boxLayout->addWidget(textLabel);
-        boxLayout->setAlignment(Qt::AlignLeft); // Ensure items stay on the left side
+        boxLayout->setAlignment(Qt::AlignLeft);
         box->setLayout(boxLayout);
 
         layout->addWidget(box);
