@@ -1,86 +1,76 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QFileDialog>
-#include <QFileSystemModel>
+
 #include <QDir>
-#include <QLabel>
-#include <QGridLayout>
+#include <QFileIconProvider>
+#include <QPushButton>
 #include <QDateTime>
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), historyIndex(-1) {
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
     ui->setupUi(this);
-    loadDirectory(QDir::homePath());
+    setWindowFlags(Qt::FramelessWindowHint);
+    setAttribute(Qt::WA_TranslucentBackground);
+
+    connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
+    connect(ui->actionForward, &QAction::triggered, this, &MainWindow::goForward);
+
+    listDirectory(QDir::homePath());
 }
 
-MainWindow::~MainWindow() {
+MainWindow::~MainWindow()
+{
     delete ui;
 }
 
-void MainWindow::loadDirectory(QString directoryPath) {
-    QDir directory(directoryPath);
-    auto list = directory.entryInfoList(QDir::NoDotAndDotDot | QDir::AllEntries);
+void MainWindow::listDirectory(QString path)
+{
+    ui->pathLabel->setText(path);
 
-    auto widget = new QWidget();
-    auto layout = new QGridLayout(widget);
+    QDir dir(path);
+    QFileInfoList list = dir.entryInfoList(QDir::NoDotAndDotDot | QDir::AllEntries);
 
-    int row = 0;
-    int col = 0;
-
-    for (const auto &fileInfo : list) {
-        auto button = new QPushButton();
-        button->setIcon(QIcon(fileInfo.absoluteFilePath()));
-        button->setIconSize(QSize(100, 100));
-        button->setFixedSize(QSize(120, 120));
-
-        QString fileInfoString = fileInfo.fileName() + "\n" +
-            fileInfo.lastModified().toString("yyyy-MM-dd hh:mm:ss");
-
-        auto textLabel = new QLabel(fileInfoString);
-
-        layout->addWidget(button, row, col, Qt::AlignCenter);
-        layout->addWidget(textLabel, row+1, col, Qt::AlignCenter);
-
-        col++;
-
-        if (col == 4) {
-            row += 2;
-            col = 0;
-        }
-    }
-
+    QWidget *widget = new QWidget;
+    QVBoxLayout *layout = new QVBoxLayout(widget);
+    widget->setLayout(layout);
     ui->scrollArea->setWidget(widget);
-    ui->pathLabel->setText(directoryPath);
 
-    if (history.empty() || history.last() != directoryPath) {
-        history.append(directoryPath);
-        historyIndex++;
-    }
+    for(QFileInfo fileInfo : list) {
+        QHBoxLayout *hbox = new QHBoxLayout();
+        QLabel *iconLabel = new QLabel();
+        QLabel *textLabel = new QLabel();
 
-    updateNavigationButtons();
-}
+        auto icon = QFileIconProvider().icon(fileInfo);
+        iconLabel->setPixmap(icon.pixmap(50, 50));
 
-void MainWindow::on_fileButton_clicked() {
-    QString directory = QFileDialog::getExistingDirectory(this, "Open a folder", QDir::homePath(), QFileDialog::ShowDirsOnly);
-    if (!directory.isEmpty()) {
-        loadDirectory(directory);
-    }
-}
+        textLabel->setText(QString("%1\nCreated: %2")
+            .arg(fileInfo.fileName())
+            .arg(fileInfo.birthTime().toString()));
 
-void MainWindow::on_backButton_clicked() {
-    if (historyIndex > 0) {
-        historyIndex--;
-        loadDirectory(history[historyIndex]);
-    }
-}
+        QPushButton *button = new QPushButton("Open");
+        connect(button, &QPushButton::clicked, [=](){
+            if(fileInfo.isDir()) {
+                pathsStack.push(path);
+                listDirectory(fileInfo.absoluteFilePath());
+            }
+        });
 
-void MainWindow::on_forwardButton_clicked() {
-    if (historyIndex < history.size() - 1) {
-        historyIndex++;
-        loadDirectory(history[historyIndex]);
+        hbox->addWidget(iconLabel);
+        hbox->addWidget(textLabel);
+        hbox->addWidget(button);
+        hbox->addStretch(1);
+        layout->addLayout(hbox);
     }
 }
 
-void MainWindow::updateNavigationButtons() {
-    ui->backButton->setEnabled(historyIndex > 0);
-    ui->forwardButton->setEnabled(historyIndex < history.size() - 1);
+void MainWindow::goBack() {
+    if(!pathsStack.isEmpty()) {
+        listDirectory(pathsStack.pop());
+    }
+}
+
+void MainWindow::goForward() {
+    // future implementation...
 }

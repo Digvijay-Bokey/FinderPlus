@@ -838,6 +838,6 @@ CMakeFiles/fileExplorer.dir/fileExplorer_autogen/mocs_compilation.cpp.o: \
   /opt/homebrew/include/QtGui/qcursor.h \
   /opt/homebrew/include/QtGui/qbitmap.h \
   /opt/homebrew/include/QtWidgets/qtabwidget.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QVector \
-  /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QStack \
+  /opt/homebrew/lib/QtCore.framework/Headers/qstack.h \
   /opt/homebrew/include/QtCore/qtmochelpers.h

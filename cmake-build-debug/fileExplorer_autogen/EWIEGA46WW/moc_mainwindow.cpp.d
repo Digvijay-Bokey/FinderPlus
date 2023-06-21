@@ -87,7 +87,7 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/wait.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/QVector \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/QStack \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
@@ -160,6 +160,7 @@
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qsize.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qstack.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qstring.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qstringalgorithms.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qstringconverter_base.h \
@@ -193,7 +194,6 @@
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
-  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvector.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qaction.h \

@@ -2,29 +2,28 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QVector>
+#include <QStack>
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+namespace Ui {
+class MainWindow;
+}
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QMainWindow
+{
     Q_OBJECT
+
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
-    void loadDirectory(QString directoryPath);
-    void on_fileButton_clicked();
-    void on_backButton_clicked();
-    void on_forwardButton_clicked();
+    void listDirectory(QString path);
+    void goBack();
+    void goForward();
 
 private:
-    void updateNavigationButtons();
     Ui::MainWindow *ui;
-    QVector<QString> history;
-    int historyIndex;
+    QStack<QString> pathsStack;
 };
 
 #endif // MAINWINDOW_H

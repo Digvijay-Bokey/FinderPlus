@@ -92,7 +92,7 @@
  mdp:/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/stdio.h
  mdp:/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/syslimits.h
  mdp:/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/wait.h
- mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/QVector
+ mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/QStack
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/q20memory.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h
@@ -165,6 +165,7 @@
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qsize.h
+ mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qstack.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qstring.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qstringalgorithms.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qstringconverter_base.h
@@ -198,7 +199,6 @@
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvariant.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h
- mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvector.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h
  mdp:/opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qaction.h
