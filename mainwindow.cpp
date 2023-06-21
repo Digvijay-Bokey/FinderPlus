@@ -1,31 +1,36 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QFile>
+#include <QGridLayout>
+#include <QDirIterator>
+#include <QListWidget>
+#include <QLabel>
+#include <QFileInfoList>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow) {
-
+        : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
 
-    model = new QFileSystemModel;
-    model->setRootPath(QDir::currentPath());
+    auto layout = new QGridLayout;
 
-    ui->treeView->setModel(model);
-    ui->treeView->setRootIndex(model->index(QDir::currentPath()));
+    QDirIterator it(QDir::currentPath(), QDir::Files, QDirIterator::Subdirectories);
+    while (it.hasNext()) {
+        auto file = it.next();
+        auto icon = QFileIconProvider().icon(QFileInfo(file));
+        auto label = new QLabel;
+        label->setPixmap(icon.pixmap(64, 64));
+        layout->addWidget(label);
+    }
 
-    ui->listWidget->addItem("Home");
-    ui->listWidget->addItem("Search");
-    ui->listWidget->addItem("Your Library");
+    auto widget = new QWidget;
+    widget->setLayout(layout);
 
-    QObject::connect(ui->listWidget, &QListWidget::currentRowChanged, ui->stackedWidget, &QStackedWidget::setCurrentIndex);
+    ui->scrollArea->setWidget(widget);
 
     QFile styleSheetFile(":/darktheme.qss");
     styleSheetFile.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(styleSheetFile.readAll());
     qApp->setStyleSheet(styleSheet);
-
-    setAttribute(Qt::WA_NoSystemBackground, true);
-    setAttribute(Qt::WA_TranslucentBackground, true);
 }
 
 MainWindow::~MainWindow() {

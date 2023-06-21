@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QFileSystemModel>
+#include <QLabel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

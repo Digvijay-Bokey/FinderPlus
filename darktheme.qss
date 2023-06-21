@@ -1,22 +1,18 @@
 * {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #181818;
     color: #FFFFFF;
 }
 
-QMainWindow {
-    border: 1px solid rgba(255, 255, 255, 50);
-}
-
-QTreeView::item {
+QLabel {
+    border: 1px solid #282828;
     border-radius: 5px;
     padding: 5px;
 }
 
-QTreeView::item:selected {
-    background: rgba(29, 185, 84, 127);
+QMainWindow {
+    border: 1px solid #282828;
 }
 
-QListWidget {
-    background-color: rgba(0, 0, 0, 100);
-    border: 1px solid rgba(255, 255, 255, 50);
+QScrollArea {
+    background-color: #181818;
 }
