@@ -8,14 +8,11 @@
 #include <QFileInfoList>
 #include <QFileIconProvider>
 #include <QDateTime>
+#include <QStatusBar>
 
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-
-    setWindowOpacity(0.9);
-    setAttribute(Qt::WA_NoSystemBackground, true);
-    setAttribute(Qt::WA_TranslucentBackground, true);
 
     auto layout = new QVBoxLayout;
     layout->setSpacing(10);
@@ -41,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
         auto boxLayout = new QHBoxLayout;
         boxLayout->addWidget(iconLabel);
         boxLayout->addWidget(textLabel);
-        boxLayout->setAlignment(Qt::AlignLeft);
+        boxLayout->setAlignment(Qt::AlignLeft); // Ensure items stay on the left side
         box->setLayout(boxLayout);
 
         layout->addWidget(box);
@@ -56,6 +53,9 @@ MainWindow::MainWindow(QWidget *parent)
     styleSheetFile.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(styleSheetFile.readAll());
     qApp->setStyleSheet(styleSheet);
+
+    // Displaying current path in status bar
+    statusBar()->showMessage(QDir::currentPath());
 }
 
 MainWindow::~MainWindow() {

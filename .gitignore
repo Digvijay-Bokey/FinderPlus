@@ -1,2 +1,59 @@
-# Project exclude paths
-œ
+# .gitignore
+*.o
+*.lo
+*.la
+# etc...
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Qt files
+moc_*
+qrc_*
+ui_*
+Makefile*
+*_build/
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+*.tlog
+*.obj
+*_resource.rc
+qrc_*.cpp
+*_automoc.cpp
+.moc/
+qmake_*
+*.moc
+moc_*
+*.qmlc
+qmlcache/
+*.jsc
+*.pro
+.qmake.stash
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# CLion files
+.idea/
+
+# Executables
+*.app
+*.exe
+*.out
+
+# Other
+.DS_Store

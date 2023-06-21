@@ -978,4 +978,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qfileiconprovider.h \
   /opt/homebrew/include/QtGui/qabstractfileiconprovider.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QDateTime \
-  /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h
+  /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h
