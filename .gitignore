@@ -1,41 +1,40 @@
-# .gitignore
-*.o
-*.lo
-*.la
-# etc...
+# .gitignore file for Qt/C++ projects
 
-# Temporary files
-*.tmp
-*.temp
-*.swp
+# Ignore all build folders
+build*
+Release/
+Debug/
 
-# Qt files
-moc_*
-qrc_*
-ui_*
-Makefile*
-*_build/
+# Ignore all .pro.user files
 *.pro.user
 *.pro.user.*
-*.qbs.user
-*.qbs.user.*
-*.moc
-*.tlog
-*.obj
-*_resource.rc
-qrc_*.cpp
-*_automoc.cpp
-.moc/
-qmake_*
-*.moc
-moc_*
-*.qmlc
-qmlcache/
-*.jsc
-*.pro
-.qmake.stash
 
-# CMake
+# Ignore all files that might appear on different Qt Creator configurations
+*.autosave
+*.suo
+*.user
+*.user.*
+*.sdf
+*.sln
+*.sln.docstates
+*.suo
+*.opensdf
+*.vcxproj
+*.vcxproj.*
+
+# Ignore all OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Ignore CMake generated files
+CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles/
 CMakeScripts/
@@ -45,15 +44,13 @@ cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
-_deps/
 
-# CLion files
+# Ignore other Qt related files
+*.moc
+*.qmlc
+*.jsc
+qrc_*.cpp
+
+# Ignore CLion files
 .idea/
 
-# Executables
-*.app
-*.exe
-*.out
-
-# Other
-.DS_Store
