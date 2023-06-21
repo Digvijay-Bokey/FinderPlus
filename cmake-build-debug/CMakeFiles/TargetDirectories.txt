@@ -1,0 +1,4 @@
+/Users/digvijay/Documents/GitHub/FinderPlus/cmake-build-debug/CMakeFiles/fileExplorer.dir
+/Users/digvijay/Documents/GitHub/FinderPlus/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/digvijay/Documents/GitHub/FinderPlus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/digvijay/Documents/GitHub/FinderPlus/cmake-build-debug/CMakeFiles/fileExplorer_autogen.dir
