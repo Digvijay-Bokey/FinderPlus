@@ -11,11 +11,15 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowFlags(Qt::FramelessWindowHint);
+    //setWindowFlags(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_TranslucentBackground);
 
     connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
     connect(ui->actionForward, &QAction::triggered, this, &MainWindow::goForward);
+    connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
+
+
+
 
     listDirectory(QDir::homePath());
 }
