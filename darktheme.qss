@@ -14,3 +14,21 @@ QTreeView::item:selected {
 QStatusBar {
     color: #1db954;
 }
+QMainWindow {
+    background-color: rgba(40, 40, 40, 200);
+}
+
+QTreeView {
+    alternate-background-color: #292929;
+    background: #363636;
+}
+
+QTreeView::item {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QTreeView::item:selected {
+    background: #1db954;
+}
+

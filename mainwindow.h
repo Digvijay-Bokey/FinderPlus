@@ -3,27 +3,21 @@
 
 #include <QMainWindow>
 #include <QFileSystemModel>
-#include <QTreeView>
-#include <QListWidget>
-#include <QStackedWidget>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QStatusBar>
+
+namespace Ui {
+class MainWindow;
+}
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
 
 private:
-    QWidget *window;
-    QVBoxLayout *mainLayout;
-    QHBoxLayout *layout;
-    QListWidget *listWidget;
-    QStackedWidget *stackedWidget;
+    Ui::MainWindow *ui;
     QFileSystemModel *model;
-    QTreeView *tree;
 };
 
 #endif // MAINWINDOW_H

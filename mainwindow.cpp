@@ -1,38 +1,35 @@
-#include "mainWindow.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 #include <QFile>
 
 MainWindow::MainWindow(QWidget *parent)
-        : QMainWindow(parent),
-          window(new QWidget),
-          mainLayout(new QVBoxLayout),
-          layout(new QHBoxLayout),
-          listWidget(new QListWidget),
-          stackedWidget(new QStackedWidget),
-          model(new QFileSystemModel),
-          tree(new QTreeView) {
+        : QMainWindow(parent), ui(new Ui::MainWindow) {
+    ui->setupUi(this);
 
+    model = new QFileSystemModel;
+    model->setRootPath(QDir::currentPath());
+
+    ui->treeView->setModel(model);
+    ui->treeView->setRootIndex(model->index(QDir::currentPath()));
+
+    ui->listWidget->addItem("Home");
+    ui->listWidget->addItem("Search");
+    ui->listWidget->addItem("Your Library");
+
+    QObject::connect(ui->listWidget, &QListWidget::currentRowChanged, ui->stackedWidget, &QStackedWidget::setCurrentIndex);
+
+    // Customize the UI
     QFile styleSheetFile(":/darktheme.qss");
     styleSheetFile.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(styleSheetFile.readAll());
+
+    // Set the stylesheet
     qApp->setStyleSheet(styleSheet);
 
-    listWidget->addItem("Home");
-    listWidget->addItem("Search");
-    listWidget->addItem("Your Library");
+    // Enable transparency
+    setAttribute(Qt::WA_TranslucentBackground);
+}
 
-    model->setRootPath(QDir::currentPath());
-    tree->setModel(model);
-    tree->setRootIndex(model->index(QDir::currentPath()));
-
-    stackedWidget->addWidget(tree);
-
-    QObject::connect(listWidget, &QListWidget::currentRowChanged, stackedWidget, &QStackedWidget::setCurrentIndex);
-
-    layout->addWidget(listWidget);
-    layout->addWidget(stackedWidget);
-
-    mainLayout->addLayout(layout);
-    window->setLayout(mainLayout);
-
-    setCentralWidget(window);
+MainWindow::~MainWindow() {
+    delete ui;
 }
