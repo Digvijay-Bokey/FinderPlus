@@ -3,7 +3,8 @@
 #include <QFile>
 
 MainWindow::MainWindow(QWidget *parent)
-        : QMainWindow(parent), ui(new Ui::MainWindow) {
+    : QMainWindow(parent), ui(new Ui::MainWindow) {
+
     ui->setupUi(this);
 
     model = new QFileSystemModel;
@@ -23,8 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
     QString styleSheet = QLatin1String(styleSheetFile.readAll());
     qApp->setStyleSheet(styleSheet);
 
-    setAttribute(Qt::WA_TranslucentBackground);
-    setStyleSheet("background:transparent;");
+    setAttribute(Qt::WA_NoSystemBackground, true);
+    setAttribute(Qt::WA_TranslucentBackground, true);
 }
 
 MainWindow::~MainWindow() {
