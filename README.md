@@ -12,13 +12,13 @@ Finder Plus is an advanced file explorer built using the Qt framework. This appl
 
 Finder Plus is built using CMake. Make sure you have Qt and Boost installed on your machine. Then you can clone the repository and build the application:
 
-\```bash
+\``bash
 git clone https://github.com/yourusername/finderplus.git
 cd finderplus
 mkdir build && cd build
 cmake ..
 make
-\``
+\`
 
 ## Running
 
