@@ -1,43 +1,34 @@
-# FinderPlus
+# Finder Plus
 
-FinderPlus is a lightweight file explorer application built with the Qt framework. This application allows you to navigate your file system with a user-friendly interface.
+Finder Plus is an advanced file explorer built using the Qt framework. This application provides a user-friendly interface for navigating through your file system, focusing on usability and simplicity.
 
 ## Features
 
-- Browse files and directories.
-- Navigate directly into directories by clicking on them.
-- View detailed file information such as name and creation date.
+- Navigate through directories: Click on a directory to navigate into it. The path of the current directory is displayed at the bottom of the window.
+- Go back and forth: Use the back and forward arrows at the bottom left of the window to navigate through your directory history.
+- Grid layout: Files and directories are displayed in a grid layout, with file names and creation dates displayed under the file icons. 
 
-## Requirements
+## Building
 
-- Qt 5 or newer
-- CMake 3.17 or newer
+Finder Plus is built using CMake. Make sure you have Qt and Boost installed on your machine. Then you can clone the repository and build the application:
 
-## Building the Application
+\```bash
+git clone https://github.com/yourusername/finderplus.git
+cd finderplus
+mkdir build && cd build
+cmake ..
+make
+\``
 
-### Using Command Line (Linux/Mac)
+## Running
 
-1. Open a terminal and navigate to the project directory.
-2. Create a build directory: `mkdir build && cd build`.
-3. Generate the build files: `cmake ..`.
-4. Build the project: `make`.
+You can run Finder Plus directly from the build directory:
 
-### Using Qt Creator
+\``bash
+./fileExplorer
+\`
 
-1. Open the project in Qt Creator.
-2. Configure the project to use your desired kit.
-3. Click the "Build" button or use the `Ctrl+B` shortcut to build the project.
+## Contributing
 
-## Running the Application
+There are no guidelines for contributing at the moment. Feel free to open issues if you find any bugs or have any feature requests.
 
-### Using Command Line (Linux/Mac)
-
-1. From the build directory, run the application: `./fileExplorer`.
-
-### Using Qt Creator
-
-1. After building the project, click the "Run" button or use the `Ctrl+R` shortcut to start the application.
-
-## Notes
-
-At this point, the application allows navigation into directories by clicking the "Open" button next to each directory. The application starts in the home directory of the current user. The "Back" button functionality is not yet implemented in this version.
