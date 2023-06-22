@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
 #include <QDir>
 #include <QFileIconProvider>
 #include <QPushButton>
 #include <QDateTime>
+#include <QGridLayout>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -40,36 +41,41 @@ void MainWindow::listDirectory(QString path, bool addToBackStack)
     QFileInfoList list = dir.entryInfoList(QDir::NoDotAndDotDot | QDir::AllEntries);
 
     QWidget *widget = new QWidget;
-    QVBoxLayout *layout = new QVBoxLayout(widget);
+    QGridLayout *layout = new QGridLayout(widget);
     widget->setLayout(layout);
     ui->scrollArea->setWidget(widget);
 
+    int row = 0, col = 0;
     for(QFileInfo fileInfo : list) {
-        QHBoxLayout *hbox = new QHBoxLayout();
+        QVBoxLayout *vbox = new QVBoxLayout();
         QLabel *iconLabel = new QLabel();
-        QLabel *textLabel = new QLabel();
+        QPushButton *textButton = new QPushButton();
 
         auto icon = QFileIconProvider().icon(fileInfo);
         iconLabel->setPixmap(icon.pixmap(50, 50));
 
-        textLabel->setText(QString("%1\nCreated: %2")
+        textButton->setText(QString("%1\nCreated: %2")
            .arg(fileInfo.fileName())
            .arg(fileInfo.birthTime().toString()));
 
-        QPushButton *button = new QPushButton("Open");
-        connect(button, &QPushButton::clicked, [=](){
+        connect(textButton, &QPushButton::clicked, [=](){
             if(fileInfo.isDir()) {
                 listDirectory(fileInfo.absoluteFilePath());
             }
         });
 
-        hbox->addWidget(iconLabel);
-        hbox->addWidget(textLabel);
-        hbox->addWidget(button);
-        hbox->addStretch(1);
-        layout->addLayout(hbox);
+        vbox->addWidget(iconLabel);
+        vbox->addWidget(textButton);
+        layout->addLayout(vbox, row, col);
+
+        col++;
+        if (col == 4) { // adjust this value to your desired column count
+            col = 0;
+            row++;
+        }
     }
 }
+
 
 void MainWindow::goBack() {
     if(!backStack.isEmpty()) {
