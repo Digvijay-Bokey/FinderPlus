@@ -16,6 +16,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -35,6 +36,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QToolBar *toolBar;
     QLabel *pathLabel;
+    QSpacerItem *horizontalSpacer;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -74,6 +76,10 @@ public:
         pathLabel->setObjectName("pathLabel");
 
         horizontalLayout->addWidget(pathLabel);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
 
 
         verticalLayout->addLayout(horizontalLayout);
