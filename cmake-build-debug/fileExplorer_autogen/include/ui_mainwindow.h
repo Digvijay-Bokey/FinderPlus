@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QScrollArea>
@@ -31,6 +32,7 @@ public:
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_2;
+    QHBoxLayout *horizontalLayout;
     QToolBar *toolBar;
     QLabel *pathLabel;
 
@@ -41,14 +43,8 @@ public:
         MainWindow->resize(800, 600);
         actionBack = new QAction(MainWindow);
         actionBack->setObjectName("actionBack");
-        QIcon icon;
-        icon.addFile(QString::fromUtf8("<"), QSize(), QIcon::Normal, QIcon::Off);
-        actionBack->setIcon(icon);
         actionForward = new QAction(MainWindow);
         actionForward->setObjectName("actionForward");
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(">"), QSize(), QIcon::Normal, QIcon::Off);
-        actionForward->setIcon(icon1);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -64,23 +60,23 @@ public:
 
         verticalLayout->addWidget(scrollArea);
 
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
         toolBar = new QToolBar(centralwidget);
         toolBar->setObjectName("toolBar");
         toolBar->setOrientation(Qt::Horizontal);
         toolBar->setFloatable(false);
         toolBar->setMovable(false);
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(toolBar->sizePolicy().hasHeightForWidth());
-        toolBar->setSizePolicy(sizePolicy);
 
-        verticalLayout->addWidget(toolBar);
+        horizontalLayout->addWidget(toolBar);
 
         pathLabel = new QLabel(centralwidget);
         pathLabel->setObjectName("pathLabel");
 
-        verticalLayout->addWidget(pathLabel);
+        horizontalLayout->addWidget(pathLabel);
+
+
+        verticalLayout->addLayout(horizontalLayout);
 
         MainWindow->setCentralWidget(centralwidget);
 
@@ -95,6 +91,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "File Explorer", nullptr));
+        actionBack->setText(QCoreApplication::translate("MainWindow", "<", nullptr));
+        actionForward->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
     } // retranslateUi
 
 };

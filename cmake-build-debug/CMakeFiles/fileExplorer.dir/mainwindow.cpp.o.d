@@ -855,6 +855,12 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: \
   /opt/homebrew/include/QtGui/qinputmethod.h \
   /opt/homebrew/include/QtCore/qlocale.h \
   /opt/homebrew/include/QtGui/qguiapplication_platform.h \
+  /opt/homebrew/include/QtWidgets/QHBoxLayout \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
+  /opt/homebrew/include/QtWidgets/qlayout.h \
+  /opt/homebrew/include/QtWidgets/qlayoutitem.h \
+  /opt/homebrew/include/QtWidgets/qboxlayout.h \
+  /opt/homebrew/include/QtWidgets/qgridlayout.h \
   /opt/homebrew/include/QtWidgets/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
@@ -869,11 +875,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: \
   /opt/homebrew/include/QtWidgets/QToolBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtoolbar.h \
   /opt/homebrew/include/QtWidgets/QVBoxLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
-  /opt/homebrew/include/QtWidgets/qlayout.h \
-  /opt/homebrew/include/QtWidgets/qlayoutitem.h \
-  /opt/homebrew/include/QtWidgets/qboxlayout.h \
-  /opt/homebrew/include/QtWidgets/qgridlayout.h \
   /opt/homebrew/include/QtWidgets/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QDir \

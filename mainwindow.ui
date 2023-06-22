@@ -15,60 +15,58 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QScrollArea" name="scrollArea">
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents">
-       <layout class="QVBoxLayout" name="verticalLayout_2"/>
-      </widget>
-     </widget>
-    </item>
-    <item>
-     <widget class="QToolBar" name="toolBar">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <attribute name="toolBarArea">
-       <enum>TopToolBarArea</enum>
-      </attribute>
-      <attribute name="toolBarBreak">
-       <bool>false</bool>
-      </attribute>
-      <property name="floatable">
-       <bool>false</bool>
-      </property>
-      <property name="movable">
-       <bool>false</bool>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <addaction name="actionBack"/>
-      <addaction name="actionForward"/>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="pathLabel"/>
-    </item>
-   </layout>
+  <item>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <layout class="QVBoxLayout" name="verticalLayout_2"/>
+    </widget>
+   </widget>
+  </item>
+  <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QToolBar" name="toolBar">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <attribute name="toolBarArea">
+         <enum>TopToolBarArea</enum>
+        </attribute>
+        <attribute name="toolBarBreak">
+         <bool>false</bool>
+        </attribute>
+        <property name="floatable">
+         <bool>false</bool>
+        </property>
+        <property name="movable">
+         <bool>false</bool>
+        </property>
+        <addaction name="actionBack"/>
+        <addaction name="actionForward"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="pathLabel"/>
+      </item>
+    </layout>
+  </item>
+ </layout>
+
   </widget>
-  <action name="actionBack">
-   <property name="icon">
-    <iconset>
-     <normaloff>&lt;</normaloff>&lt;</iconset>
+   <action name="actionBack">
+   <property name="text">
+    <string>&lt;</string>
    </property>
   </action>
   <action name="actionForward">
-   <property name="icon">
-    <iconset>
-     <normaloff>&gt;</normaloff>&gt;</iconset>
+   <property name="text">
+    <string>&gt;</string>
    </property>
   </action>
+
  </widget>
  <resources>
   <include location="resources.qrc"/>
