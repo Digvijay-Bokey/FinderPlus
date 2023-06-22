@@ -16,10 +16,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
     connect(ui->actionForward, &QAction::triggered, this, &MainWindow::goForward);
-    connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
-
-
-
 
     listDirectory(QDir::homePath());
 }
@@ -31,6 +27,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::listDirectory(QString path)
 {
+    if (!backStack.isEmpty() && path != backStack.top()) {
+        forwardStack.clear();
+    }
+
+    backStack.push(path);
+
     ui->pathLabel->setText(path);
 
     QDir dir(path);
@@ -49,14 +51,13 @@ void MainWindow::listDirectory(QString path)
         auto icon = QFileIconProvider().icon(fileInfo);
         iconLabel->setPixmap(icon.pixmap(50, 50));
 
-     textLabel->setText(QString("%1\nCreated: %2")
-        .arg(fileInfo.fileName())
-        .arg(fileInfo.birthTime().toString()));
+        textLabel->setText(QString("%1\nCreated: %2")
+           .arg(fileInfo.fileName())
+           .arg(fileInfo.birthTime().toString()));
 
         QPushButton *button = new QPushButton("Open");
         connect(button, &QPushButton::clicked, [=](){
             if(fileInfo.isDir()) {
-                pathsStack.push(path);
                 listDirectory(fileInfo.absoluteFilePath());
             }
         });
@@ -70,11 +71,18 @@ void MainWindow::listDirectory(QString path)
 }
 
 void MainWindow::goBack() {
-    if(!pathsStack.isEmpty()) {
-        listDirectory(pathsStack.pop());
+    if(!backStack.isEmpty()) {
+        forwardStack.push(backStack.pop());
+        if (!backStack.isEmpty()) {
+            listDirectory(backStack.top());
+        }
     }
 }
 
 void MainWindow::goForward() {
-    // future implementation...
+    if(!forwardStack.isEmpty()) {
+        QString forwardPath = forwardStack.pop();
+        backStack.push(forwardPath);
+        listDirectory(forwardPath);
+    }
 }

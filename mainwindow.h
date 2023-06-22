@@ -23,7 +23,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QStack<QString> pathsStack;
+    QStack<QString> backStack;
+    QStack<QString> forwardStack;
 };
 
 #endif // MAINWINDOW_H

@@ -2650,6 +2650,8 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o
  /opt/homebrew/include/QtWidgets/QScrollArea
  /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollarea.h
  /opt/homebrew/include/QtWidgets/qabstractscrollarea.h
+ /opt/homebrew/include/QtWidgets/QSpacerItem
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qlayoutitem.h
  /opt/homebrew/include/QtWidgets/QToolBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/qtoolbar.h
  /opt/homebrew/include/QtWidgets/QVBoxLayout

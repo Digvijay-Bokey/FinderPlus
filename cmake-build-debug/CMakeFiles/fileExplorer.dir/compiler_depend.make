@@ -2646,6 +2646,8 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
   /opt/homebrew/include/QtWidgets/QScrollArea \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollarea.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
+  /opt/homebrew/include/QtWidgets/QSpacerItem \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlayoutitem.h \
   /opt/homebrew/include/QtWidgets/QToolBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtoolbar.h \
   /opt/homebrew/include/QtWidgets/QVBoxLayout \
@@ -3126,6 +3128,8 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_sort_heap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_set_union.h:
+
+/opt/homebrew/include/QtWidgets/QSpacerItem:
 
 /opt/homebrew/include/QtCore/qstringalgorithms.h:
 
@@ -4408,6 +4412,8 @@ fileExplorer_autogen/EWIEGA46WW/qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/pthread/sched.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/stdint.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/qlayoutitem.h:
 
 /opt/homebrew/include/QtGui/qcursor.h:
 
