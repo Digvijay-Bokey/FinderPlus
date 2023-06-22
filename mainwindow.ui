@@ -52,15 +52,13 @@
    </layout>
   </widget>
   <action name="actionBack">
-   <property name="icon">
-    <iconset resource="fileExplorer.qrc">
-     <normaloff>:/back.png</normaloff>:/back.png</iconset>
+   <property name="text">
+    <string>&lt;</string>
    </property>
   </action>
   <action name="actionForward">
-   <property name="icon">
-    <iconset resource="fileExplorer.qrc">
-     <normaloff>:/forward.png</normaloff>:/forward.png</iconset>
+   <property name="text">
+    <string>&gt;</string>
    </property>
   </action>
  </widget>
