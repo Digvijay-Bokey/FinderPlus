@@ -59,3 +59,8 @@ QToolBar::button:hover {
     background-color: #d3d3d3;
     color: #141414;
 }
+QPushButton {
+    text-align: center;
+    word-wrap: break-word;
+}
+

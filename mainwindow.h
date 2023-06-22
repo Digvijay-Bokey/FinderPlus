@@ -1,6 +1,3 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
 #include <QMainWindow>
 #include <QStack>
 
@@ -17,7 +14,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void listDirectory(QString path, bool addToBackStack = true);
+    void listDirectory(QString path);
     void goBack();
     void goForward();
 
@@ -25,6 +22,5 @@ private:
     Ui::MainWindow *ui;
     QStack<QString> backStack;
     QStack<QString> forwardStack;
+    QString currentPath;
 };
-
-#endif // MAINWINDOW_H

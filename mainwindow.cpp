@@ -6,13 +6,11 @@
 #include <QDateTime>
 #include <QGridLayout>
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //setWindowFlags(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_TranslucentBackground);
 
     connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
@@ -26,15 +24,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::listDirectory(QString path, bool addToBackStack)
+void MainWindow::listDirectory(QString path)
 {
-    if (addToBackStack) {
-        if (!backStack.isEmpty() && path != backStack.top()) {
-            forwardStack.clear();
-        }
-        backStack.push(path);
-    }
-
+    currentPath = path;
     ui->pathLabel->setText(path);
 
     QDir dir(path);
@@ -53,43 +45,43 @@ void MainWindow::listDirectory(QString path, bool addToBackStack)
 
         auto icon = QFileIconProvider().icon(fileInfo);
         iconLabel->setPixmap(icon.pixmap(50, 50));
+        iconLabel->setAlignment(Qt::AlignCenter);
 
         textButton->setText(QString("%1\nCreated: %2")
-           .arg(fileInfo.fileName())
-           .arg(fileInfo.birthTime().toString()));
+            .arg(fileInfo.fileName())
+            .arg(fileInfo.birthTime().toString()));
+        textButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
-        connect(textButton, &QPushButton::clicked, [=](){
-            if(fileInfo.isDir()) {
+        if(fileInfo.isDir()) {
+            connect(textButton, &QPushButton::clicked, [=](){
+                backStack.push(currentPath);
+                forwardStack.clear();
                 listDirectory(fileInfo.absoluteFilePath());
-            }
-        });
+            });
+        }
 
         vbox->addWidget(iconLabel);
         vbox->addWidget(textButton);
+        vbox->setAlignment(Qt::AlignCenter);
         layout->addLayout(vbox, row, col);
 
-        col++;
-        if (col == 4) { // adjust this value to your desired column count
+        if(++col >= 4) {
             col = 0;
             row++;
         }
     }
 }
 
-
 void MainWindow::goBack() {
     if(!backStack.isEmpty()) {
-        forwardStack.push(backStack.pop());
-        if (!backStack.isEmpty()) {
-            listDirectory(backStack.top(), false);
-        }
+        forwardStack.push(currentPath);
+        listDirectory(backStack.pop());
     }
 }
 
 void MainWindow::goForward() {
     if(!forwardStack.isEmpty()) {
-        QString forwardPath = forwardStack.pop();
-        backStack.push(forwardPath);
-        listDirectory(forwardPath, false);
+        backStack.push(currentPath);
+        listDirectory(forwardStack.pop());
     }
 }

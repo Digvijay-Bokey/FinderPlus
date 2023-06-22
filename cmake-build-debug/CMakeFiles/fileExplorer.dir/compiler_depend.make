@@ -2738,7 +2738,9 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QDateTime \
-  /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h
+  /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h
 
 
 /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h:
@@ -2904,6 +2906,8 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /opt/homebrew/include/QtCore/qmap.h:
 
 /opt/homebrew/include/QtCore/qstringconverter_base.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h:
 
 /opt/homebrew/include/QtCore/qtextstream.h:
 
@@ -3256,6 +3260,8 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_uint64_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_adjacent_find.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_array.h:
 
