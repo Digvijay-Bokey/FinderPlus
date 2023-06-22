@@ -25,13 +25,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::listDirectory(QString path)
+void MainWindow::listDirectory(QString path, bool addToBackStack)
 {
-    if (!backStack.isEmpty() && path != backStack.top()) {
-        forwardStack.clear();
+    if (addToBackStack) {
+        if (!backStack.isEmpty() && path != backStack.top()) {
+            forwardStack.clear();
+        }
+        backStack.push(path);
     }
-
-    backStack.push(path);
 
     ui->pathLabel->setText(path);
 
@@ -74,7 +75,7 @@ void MainWindow::goBack() {
     if(!backStack.isEmpty()) {
         forwardStack.push(backStack.pop());
         if (!backStack.isEmpty()) {
-            listDirectory(backStack.top());
+            listDirectory(backStack.top(), false);
         }
     }
 }
@@ -83,6 +84,6 @@ void MainWindow::goForward() {
     if(!forwardStack.isEmpty()) {
         QString forwardPath = forwardStack.pop();
         backStack.push(forwardPath);
-        listDirectory(forwardPath);
+        listDirectory(forwardPath, false);
     }
 }

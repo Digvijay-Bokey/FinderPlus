@@ -17,7 +17,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void listDirectory(QString path);
+    void listDirectory(QString path, bool addToBackStack = true);
     void goBack();
     void goForward();
 
