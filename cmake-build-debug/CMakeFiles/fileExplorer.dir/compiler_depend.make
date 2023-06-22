@@ -2629,6 +2629,12 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
   /opt/homebrew/include/QtGui/qinputmethod.h \
   /opt/homebrew/include/QtCore/qlocale.h \
   /opt/homebrew/include/QtGui/qguiapplication_platform.h \
+  /opt/homebrew/include/QtWidgets/QHBoxLayout \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
+  /opt/homebrew/include/QtWidgets/qlayout.h \
+  /opt/homebrew/include/QtWidgets/qlayoutitem.h \
+  /opt/homebrew/include/QtWidgets/qboxlayout.h \
+  /opt/homebrew/include/QtWidgets/qgridlayout.h \
   /opt/homebrew/include/QtWidgets/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
@@ -2643,11 +2649,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
   /opt/homebrew/include/QtWidgets/QToolBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtoolbar.h \
   /opt/homebrew/include/QtWidgets/QVBoxLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
-  /opt/homebrew/include/QtWidgets/qlayout.h \
-  /opt/homebrew/include/QtWidgets/qlayoutitem.h \
-  /opt/homebrew/include/QtWidgets/qboxlayout.h \
-  /opt/homebrew/include/QtWidgets/qgridlayout.h \
   /opt/homebrew/include/QtWidgets/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QDir \
@@ -2754,12 +2755,6 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 
 /opt/homebrew/include/QtWidgets/QWidget:
 
-/opt/homebrew/include/QtWidgets/qgridlayout.h:
-
-/opt/homebrew/include/QtWidgets/qlayoutitem.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h:
-
 /opt/homebrew/lib/QtWidgets.framework/Headers/qtoolbar.h:
 
 /opt/homebrew/include/QtWidgets/QToolBar:
@@ -2775,6 +2770,12 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h:
 
 /opt/homebrew/include/QtWidgets/QLabel:
+
+/opt/homebrew/include/QtWidgets/qgridlayout.h:
+
+/opt/homebrew/include/QtWidgets/qlayoutitem.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h:
 
 /Users/digvijay/Documents/GitHub/FinderPlus/mainwindow.cpp:
 
@@ -3043,6 +3044,8 @@ CMakeFiles/fileExplorer.dir/mainwindow.cpp.o: /Users/digvijay/Documents/GitHub/F
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/default_searcher.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__split_buffer:
+
+/opt/homebrew/include/QtWidgets/QHBoxLayout:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
 

@@ -16,6 +16,16 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      </widget>
+     </widget>
+    </item>
+    <item>
      <widget class="QToolBar" name="toolBar">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -32,18 +42,14 @@
       <property name="movable">
        <bool>false</bool>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <addaction name="actionBack"/>
       <addaction name="actionForward"/>
-     </widget>
-    </item>
-    <item>
-     <widget class="QScrollArea" name="scrollArea">
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents">
-       <layout class="QVBoxLayout" name="verticalLayout_2"/>
-      </widget>
      </widget>
     </item>
     <item>
@@ -52,18 +58,20 @@
    </layout>
   </widget>
   <action name="actionBack">
-   <property name="text">
-    <string>&lt;</string>
+   <property name="icon">
+    <iconset>
+     <normaloff>&lt;</normaloff>&lt;</iconset>
    </property>
   </action>
   <action name="actionForward">
-   <property name="text">
-    <string>&gt;</string>
+   <property name="icon">
+    <iconset>
+     <normaloff>&gt;</normaloff>&gt;</iconset>
    </property>
   </action>
  </widget>
  <resources>
-  <include location="fileExplorer.qrc"/>
+  <include location="resources.qrc"/>
  </resources>
  <connections/>
 </ui>
