@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowOpacity(0.9);
+    setWindowOpacity(0.95);
     setAttribute(Qt::WA_TranslucentBackground);
 
     connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
