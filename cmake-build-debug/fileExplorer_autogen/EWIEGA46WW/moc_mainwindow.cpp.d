@@ -191,6 +191,7 @@
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qtversionchecks.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qtypeinfo.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qurl.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
@@ -209,19 +210,30 @@
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qpen.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qpolygon.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qregion.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qtextcursor.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qtextformat.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qtextoption.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/qlineedit.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
+  /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
   /opt/homebrew/Cellar/qt/6.5.1_1/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \

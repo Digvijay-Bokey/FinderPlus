@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionForward, &QAction::triggered, this, &MainWindow::goForward);
     connect(ui->searchLineEdit, &QLineEdit::returnPressed, this, &MainWindow::searchFiles);
 
+    ui->searchLineEdit->setPlaceholderText("Search files...");
+
     listDirectory(QDir::homePath());
 }
 

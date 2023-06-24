@@ -840,4 +840,16 @@ CMakeFiles/fileExplorer.dir/fileExplorer_autogen/mocs_compilation.cpp.o: \
   /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QStack \
   /opt/homebrew/lib/QtCore.framework/Headers/qstack.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /opt/homebrew/include/QtWidgets/qframe.h \
+  /opt/homebrew/include/QtGui/qtextcursor.h \
+  /opt/homebrew/include/QtGui/qtextdocument.h \
+  /opt/homebrew/include/QtCore/qurl.h \
+  /opt/homebrew/include/QtGui/qtextformat.h \
+  /opt/homebrew/include/QtGui/qpen.h \
+  /opt/homebrew/include/QtGui/qtextoption.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /opt/homebrew/include/QtCore/qtmochelpers.h
