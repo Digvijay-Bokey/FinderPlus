@@ -16,7 +16,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QToolBar>
@@ -32,14 +31,14 @@ public:
     QAction *actionForward;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
+    QLineEdit *searchLineEdit;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout;
+    QHBoxLayout *horizontalLayout_2;
     QToolBar *toolBar;
     QLabel *pathLabel;
-    QLineEdit *searchInput;
-    QPushButton *searchButton;
     QSpacerItem *horizontalSpacer;
 
     void setupUi(QMainWindow *MainWindow)
@@ -55,6 +54,16 @@ public:
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        searchLineEdit = new QLineEdit(centralwidget);
+        searchLineEdit->setObjectName("searchLineEdit");
+
+        horizontalLayout->addWidget(searchLineEdit);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
         scrollArea->setWidgetResizable(true);
@@ -66,37 +75,27 @@ public:
 
         verticalLayout->addWidget(scrollArea);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
         toolBar = new QToolBar(centralwidget);
         toolBar->setObjectName("toolBar");
         toolBar->setOrientation(Qt::Horizontal);
         toolBar->setFloatable(false);
         toolBar->setMovable(false);
 
-        horizontalLayout->addWidget(toolBar);
+        horizontalLayout_2->addWidget(toolBar);
 
         pathLabel = new QLabel(centralwidget);
         pathLabel->setObjectName("pathLabel");
 
-        horizontalLayout->addWidget(pathLabel);
-
-        searchInput = new QLineEdit(centralwidget);
-        searchInput->setObjectName("searchInput");
-
-        horizontalLayout->addWidget(searchInput);
-
-        searchButton = new QPushButton(centralwidget);
-        searchButton->setObjectName("searchButton");
-
-        horizontalLayout->addWidget(searchButton);
+        horizontalLayout_2->addWidget(pathLabel);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer);
+        horizontalLayout_2->addItem(horizontalSpacer);
 
 
-        verticalLayout->addLayout(horizontalLayout);
+        verticalLayout->addLayout(horizontalLayout_2);
 
         MainWindow->setCentralWidget(centralwidget);
 
@@ -113,8 +112,6 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "File Explorer", nullptr));
         actionBack->setText(QCoreApplication::translate("MainWindow", "<", nullptr));
         actionForward->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
-        searchInput->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search files...", nullptr));
-        searchButton->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
     } // retranslateUi
 
 };

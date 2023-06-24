@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
     connect(ui->actionForward, &QAction::triggered, this, &MainWindow::goForward);
-    connect(ui->searchButton, &QPushButton::clicked, this, &MainWindow::searchFiles);
+    connect(ui->searchLineEdit, &QLineEdit::returnPressed, this, &MainWindow::searchFiles);
 
     listDirectory(QDir::homePath());
 }
@@ -90,7 +90,7 @@ void MainWindow::goForward() {
 }
 
 void MainWindow::searchFiles() {
-    QString searchQuery = ui->searchInput->text();
+    QString searchQuery = ui->searchLineEdit->text();
     QDirIterator it(currentPath, QStringList() << searchQuery, QDir::Files, QDirIterator::Subdirectories);
     QWidget *widget = new QWidget;
     QGridLayout *layout = new QGridLayout(widget);
@@ -132,4 +132,3 @@ void MainWindow::searchFiles() {
         }
     }
 }
-
