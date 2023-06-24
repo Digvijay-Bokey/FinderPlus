@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+
 }
 
 void MainWindow::listDirectory(QString path)
@@ -84,5 +85,50 @@ void MainWindow::goForward() {
     if(!forwardStack.isEmpty()) {
         backStack.push(currentPath);
         listDirectory(forwardStack.pop());
+    }
+
+}
+void MainWindow::searchFiles()
+{
+    QString searchTerm = ui->searchInput->text();
+    QDir directory(currentPath);
+    QStringList files = directory.entryList(QStringList() << "*" + searchTerm + "*", QDir::Files);
+
+    QWidget *widget = new QWidget;
+    QGridLayout *layout = new QGridLayout(widget);
+    widget->setLayout(layout);
+    ui->scrollArea->setWidget(widget);
+
+    int row = 0, col = 0;
+    for (const QString &file : files) {
+        QVBoxLayout *vbox = new QVBoxLayout();
+        QLabel *iconLabel = new QLabel();
+        QPushButton *textButton = new QPushButton();
+
+        QFileInfo fileInfo(directory.absoluteFilePath(file));
+        auto icon = QFileIconProvider().icon(fileInfo);
+        iconLabel->setPixmap(icon.pixmap(50, 50));
+        iconLabel->setAlignment(Qt::AlignCenter);
+
+        textButton->setText(file);
+        textButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
+        if(fileInfo.isDir()) {
+            connect(textButton, &QPushButton::clicked, [=](){
+                backStack.push(currentPath);
+                forwardStack.clear();
+                listDirectory(fileInfo.absoluteFilePath());
+            });
+        }
+
+        vbox->addWidget(iconLabel);
+        vbox->addWidget(textButton);
+        vbox->setAlignment(Qt::AlignCenter);
+        layout->addLayout(vbox, row, col);
+
+        if(++col >= 4) {
+            col = 0;
+            row++;
+        }
     }
 }

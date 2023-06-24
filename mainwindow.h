@@ -1,22 +1,26 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
 #include <QMainWindow>
 #include <QStack>
 
-namespace Ui {
-class MainWindow;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
     void listDirectory(QString path);
     void goBack();
     void goForward();
+    void searchFiles();
 
 private:
     Ui::MainWindow *ui;
@@ -24,3 +28,5 @@ private:
     QStack<QString> forwardStack;
     QString currentPath;
 };
+
+#endif // MAINWINDOW_H

@@ -14,7 +14,9 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QToolBar>
@@ -36,6 +38,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QToolBar *toolBar;
     QLabel *pathLabel;
+    QLineEdit *searchInput;
+    QPushButton *searchButton;
     QSpacerItem *horizontalSpacer;
 
     void setupUi(QMainWindow *MainWindow)
@@ -77,6 +81,16 @@ public:
 
         horizontalLayout->addWidget(pathLabel);
 
+        searchInput = new QLineEdit(centralwidget);
+        searchInput->setObjectName("searchInput");
+
+        horizontalLayout->addWidget(searchInput);
+
+        searchButton = new QPushButton(centralwidget);
+        searchButton->setObjectName("searchButton");
+
+        horizontalLayout->addWidget(searchButton);
+
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
@@ -99,6 +113,8 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "File Explorer", nullptr));
         actionBack->setText(QCoreApplication::translate("MainWindow", "<", nullptr));
         actionForward->setText(QCoreApplication::translate("MainWindow", ">", nullptr));
+        searchInput->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search files...", nullptr));
+        searchButton->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
     } // retranslateUi
 
 };
