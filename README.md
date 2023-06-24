@@ -1,32 +1,32 @@
 # Finder Plus
 
-Finder Plus is an advanced file explorer built using the Qt framework. This application provides a user-friendly interface for navigating through your file system, focusing on usability and simplicity.
+Finder Plus is a sophisticated file exploration desktop application that is powered by the robust capabilities of the Qt (C++) framework. The application offers an elegant and user-friendly interface that significantly simplifies file and directory browsing tasks. Finder Plus is tailored for individuals who value speed, efficiency, and organization.
 
-## Features
+## Notable Features
 
-- Navigate through directories: Click on a directory to navigate into it. The path of the current directory is displayed at the bottom of the window.
-- Go back and forth: Use the back and forward arrows at the bottom left of the window to navigate through your directory history.
-- Grid layout: Files and directories are displayed in a grid layout, with file names and creation dates displayed under the file icons. 
+- **Advanced File and Directory Display**: Finder Plus provides a seamless view of your files and directories. All entries are displayed in a manner that enhances usability and navigation.
 
-## Building
+- **Intuitive Navigation**: Traversing through directories is made effortless. Just a simple click on the directories and Finder Plus will guide you through the labyrinth of your file system. The application is equipped with Back and Forward buttons that make it even easier to navigate through your recently visited locations.
 
-Finder Plus is built using CMake. Make sure you have Qt and Boost installed on your machine. Then you can clone the repository and build the application:
+- **Powerful Search Functionality**: The application incorporates a powerful search feature that combs through the current directory and its subdirectories to find files or directories that match your search term. Simply type in your search term in the search bar and hit enter to initiate the search.
 
-\``bash
-git clone https://github.com/yourusername/finderplus.git
-cd finderplus
-mkdir build && cd build
+## Installation Guide
+
+This project utilizes CMake for building. Ensure that it is installed on your system before proceeding. Follow these steps to clone, build, and run Finder Plus:
+
+```bash
+git clone https://github.com/Digvijay-Bokey/FinderPlus.git
+cd finder-plus
+mkdir build
+cd build
 cmake ..
 make
-\`
+```
 
-## Running
+## To run the application
 
-You can run Finder Plus directly from the build directory:
+`````./fileExplorer`````
 
-\``bash
-./fileExplorer
-\`
 
 ## Contributing
 
