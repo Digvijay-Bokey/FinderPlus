@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QDateTime>
 #include <QGridLayout>
+#include <QDirIterator>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->actionBack, &QAction::triggered, this, &MainWindow::goBack);
     connect(ui->actionForward, &QAction::triggered, this, &MainWindow::goForward);
+    connect(ui->searchButton, &QPushButton::clicked, this, &MainWindow::searchFiles);
 
     listDirectory(QDir::homePath());
 }
@@ -23,7 +25,6 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-
 }
 
 void MainWindow::listDirectory(QString path)
@@ -86,31 +87,30 @@ void MainWindow::goForward() {
         backStack.push(currentPath);
         listDirectory(forwardStack.pop());
     }
-
 }
-void MainWindow::searchFiles()
-{
-    QString searchTerm = ui->searchInput->text();
-    QDir directory(currentPath);
-    QStringList files = directory.entryList(QStringList() << "*" + searchTerm + "*", QDir::Files);
 
+void MainWindow::searchFiles() {
+    QString searchQuery = ui->searchInput->text();
+    QDirIterator it(currentPath, QStringList() << searchQuery, QDir::Files, QDirIterator::Subdirectories);
     QWidget *widget = new QWidget;
     QGridLayout *layout = new QGridLayout(widget);
     widget->setLayout(layout);
     ui->scrollArea->setWidget(widget);
 
     int row = 0, col = 0;
-    for (const QString &file : files) {
+    while (it.hasNext()) {
         QVBoxLayout *vbox = new QVBoxLayout();
         QLabel *iconLabel = new QLabel();
         QPushButton *textButton = new QPushButton();
 
-        QFileInfo fileInfo(directory.absoluteFilePath(file));
+        QFileInfo fileInfo(it.next());
         auto icon = QFileIconProvider().icon(fileInfo);
         iconLabel->setPixmap(icon.pixmap(50, 50));
         iconLabel->setAlignment(Qt::AlignCenter);
 
-        textButton->setText(file);
+        textButton->setText(QString("%1\nCreated: %2")
+            .arg(fileInfo.fileName())
+            .arg(fileInfo.birthTime().toString()));
         textButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
         if(fileInfo.isDir()) {
@@ -132,3 +132,4 @@ void MainWindow::searchFiles()
         }
     }
 }
+
