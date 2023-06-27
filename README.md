@@ -20,7 +20,7 @@ cd finder-plus
 mkdir build
 cd build
 cmake ..
-make
+make 
 ```
 
 ## To run the application
