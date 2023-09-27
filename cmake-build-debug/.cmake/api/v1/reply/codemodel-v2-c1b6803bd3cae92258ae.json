@@ -41,7 +41,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "fileExplorer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fileExplorer-Debug-604d9459ac56172bd9eb.json",
+					"jsonFile" : "target-fileExplorer-Debug-0f9e6ab5350d2604629a.json",
 					"name" : "fileExplorer",
 					"projectIndex" : 0
 				},
@@ -64,6 +64,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 5
 	}
 }

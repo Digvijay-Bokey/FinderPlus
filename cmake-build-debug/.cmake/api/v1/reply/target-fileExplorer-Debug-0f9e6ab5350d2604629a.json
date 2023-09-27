@@ -26,13 +26,13 @@
 			"CMakeLists.txt",
 			"/opt/homebrew/opt/boost/lib/cmake/boost_filesystem-1.82.0/boost_filesystem-config.cmake",
 			"/opt/homebrew/opt/boost/lib/cmake/Boost-1.82.0/BoostConfig.cmake",
-			"/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/FindBoost.cmake",
+			"/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindBoost.cmake",
 			"/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
 			"/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
 			"/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake",
 			"/opt/homebrew/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
 			"/opt/homebrew/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
-			"/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeFindDependencyMacro.cmake",
+			"/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake",
 			"/opt/homebrew/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
 			"/opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
@@ -158,7 +158,7 @@
 			{
 				"command" : 3,
 				"file" : 9,
-				"line" : 47,
+				"line" : 76,
 				"parent" : 21
 			},
 			{
@@ -190,7 +190,7 @@
 			{
 				"command" : 3,
 				"file" : 9,
-				"line" : 47,
+				"line" : 76,
 				"parent" : 27
 			},
 			{
@@ -227,10 +227,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
-				},
-				{
-					"fragment" : "-std=gnu++17"
+					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
 				}
 			],
 			"defines" : 

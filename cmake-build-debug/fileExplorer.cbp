@@ -5,7 +5,7 @@
 		<Option title="fileExplorer"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\homebrew\;CMake Files\..\..\..\..\..\opt\homebrew\opt\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\Boost-1.82.0\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\boost_headers-1.82.0\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\boost_filesystem-1.82.0\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\boost_atomic-1.82.0\;CMake Files\..\..\..\..\..\opt\homebrew\lib\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6WidgetsTools\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6Core\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6Gui\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6DBus\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6DBusTools\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_1\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_1\lib\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_1\lib\cmake\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_1\lib\cmake\Qt6\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\homebrew\;CMake Files\..\..\..\..\..\opt\homebrew\opt\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\Boost-1.82.0\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\boost_headers-1.82.0\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\boost_filesystem-1.82.0\;CMake Files\..\..\..\..\..\opt\homebrew\opt\boost\lib\cmake\boost_atomic-1.82.0\;CMake Files\..\..\..\..\..\opt\homebrew\lib\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6WidgetsTools\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6Core\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6Gui\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6DBus\;CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6DBusTools\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_3\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_3\lib\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_3\lib\cmake\;CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_3\lib\cmake\Qt6\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/digvijay/Documents/GitHub/FinderPlus/cmake-build-debug"/>
@@ -805,17 +805,17 @@
 		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\lib\cmake\Qt6DBusTools\"/>
 		</Unit>
-		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/Cellar/qt/6.5.1_1/lib/cmake/Qt6/FindWrapAtomic.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_1\lib\cmake\Qt6\"/>
+		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/Cellar/qt/6.5.1_3/lib/cmake/Qt6/FindWrapAtomic.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_3\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/Cellar/qt/6.5.1_1/lib/cmake/Qt6/FindWrapOpenGL.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_1\lib\cmake\Qt6\"/>
+		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/Cellar/qt/6.5.1_3/lib/cmake/Qt6/FindWrapOpenGL.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_3\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/Cellar/qt/6.5.1_1/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_1\lib\cmake\Qt6\"/>
+		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/Cellar/qt/6.5.1_3/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_3\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/Cellar/qt/6.5.1_1/lib/cmake/Qt6/QtFeatureCommon.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_1\lib\cmake\Qt6\"/>
+		<Unit filename="/Users/digvijay/Documents/GitHub/FinderPlus/../../../../../opt/homebrew/Cellar/qt/6.5.1_3/lib/cmake/Qt6/QtFeatureCommon.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\homebrew\Cellar\qt\6.5.1_3\lib\cmake\Qt6\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
